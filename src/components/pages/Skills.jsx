@@ -27,7 +27,7 @@ const Skills = () => {
       {hamburger && <HeaderHamburger hideHamburger={handleHideHamburger} />}
       <ToastContainer position="top-left" />
       <PageTitle title="SKILLS" />
-      <div className=" md:max-w-[35rem] flex items-center flex-col justify-center px-4 md:px-0 lg:px-0 mx-auto mb-28 font-semibold ">
+      <div className=" md:max-w-[35rem] flex items-center flex-col justify-center px-4 md:px-0 lg:px-0 mx-auto pb-28 font-semibold ">
         <SkillsCard
           skills="HTML5 - CSS3 - JavaScript - Python"
           SkillName="Technical Skills"

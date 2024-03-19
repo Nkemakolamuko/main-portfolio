@@ -65,8 +65,8 @@ const Blog = () => {
       .catch((error) => {
         setIframeLoaded(true);
         console.log(error);
+        setIframeLoaded(false);
       });
-    setIframeLoaded(false);
   }, []);
 
   return (
@@ -82,7 +82,7 @@ const Blog = () => {
 
         <div>
           {iframeLoaded ? (
-            <div className="w-[500px] h-[400px] flex items-center justify-center animate-pulse">
+            <div className="w-[500px] h-[400px] flex items-center justify-center animate-pulse dark">
               Getting Articles...
             </div>
           ) : (

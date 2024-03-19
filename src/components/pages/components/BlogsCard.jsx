@@ -25,14 +25,14 @@ const BlogsCard = ({
         title="Click to visit"
         className="w-[95%] h-[60%] border rounded-md bg-white flex flex-col hover:scale-95 active:scale-95 transition-all duration-300"
       >
-        <div className="w-[full] h-[70%] rounded-t-md">
+        <div className="w-full h-[70%] rounded-t-md">
           <img
             src={img}
             alt="Blog Image"
             className="rounded-t-md h-full w-full"
           />
         </div>
-        <div className="w-[full] h-[40%] px-2 bg-slate-200 rounded-b-md flex flex-col justify-center">
+        <div className="w-full h-[40%] px-2 bg-slate-200 rounded-b-md flex flex-col justify-center">
           <p className="text-sm text-black">
             {title} - {by}
           </p>
@@ -40,7 +40,7 @@ const BlogsCard = ({
           <p className="text-[10px] text-slate-500 truncate">{mainSite}</p>
         </div>
       </a>
-      <div className="w-[full] px-3 h-[40%] flex flex-col justify-center mr-auto">
+      <div className="w-full px-3 h-[40%] flex flex-col justify-center mr-auto">
         <p className="text-slate-900 text-sm">
           {title} - {by}
         </p>
@@ -48,7 +48,7 @@ const BlogsCard = ({
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-500 hover:text-blue-700 text-sm"
+          className="text-blue-500 hover:text-blue-700 text-sm overflow-hidden"
         >
           {url}
         </a>
@@ -66,14 +66,14 @@ const BlogsCard = ({
     //     title="Click to visit"
     //     className="w-[95%] h-[60%] border rounded-md bg-white flex flex-col hover:scale-95 active:scale-95 transition-all duration-300"
     //   >
-    //     <div className="w-[full] h-[60%] mb-2 rounded-t-md">
+    //     <div className="w-full h-[60%] mb-2 rounded-t-md">
     //       <img
     //         src={img}
     //         alt="Blog Image"
     //         className="rounded-t-md h-full w-full"
     //       />
     //     </div>
-    //     <div className="w-[full] h-[40%] px-2 bg-slate-200 rounded-b-md flex flex-col justify-center">
+    //     <div className="w-full h-[40%] px-2 bg-slate-200 rounded-b-md flex flex-col justify-center">
     //       <p className="text-sm text-black">
     //         How To Create A Login System Using Firebase And ReactJS - Traversy
     //         Media
@@ -87,7 +87,7 @@ const BlogsCard = ({
     //       </p>
     //     </div>
     //   </a>
-    //   <div className="w-[full] px-3 h-[40%] flex flex-col justify-center">
+    //   <div className="w-full px-3 h-[40%] flex flex-col justify-center">
     //     <p className="text-slate-900 text-sm">
     //       How To Create A Login System Using Firebase And ReactJS - Traversy
     //       Media
