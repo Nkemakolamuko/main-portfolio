@@ -29,12 +29,12 @@ const Skills = () => {
       <PageTitle title="SKILLS" />
       <div className=" md:max-w-[35rem] flex items-center flex-col justify-center px-4 md:px-0 lg:px-0 mx-auto pb-28 font-semibold ">
         <SkillsCard
-          skills="HTML5 - CSS3 - JavaScript - Python"
+          skills="HTML5 - CSS3 - JavaScript - Python - NodeJs"
           SkillName="Technical Skills"
         />
 
         <SkillsCard
-          skills="ReactJS - Firebase - TailwindCSS"
+          skills="ReactJS - Firebase - TailwindCSS - Express"
           SkillName="Frameworks"
         />
 
