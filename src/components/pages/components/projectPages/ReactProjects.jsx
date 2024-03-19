@@ -103,7 +103,7 @@ const ReactProjects = () => {
             image={port}
             alt="Portfolio"
             link="https://nvincentn.vercel.app"
-            githublink="https://github.com/Nkemakolamuko"
+            githublink="https://github.com/Nkemakolamuko/main-portfolio"
           />
           <ProjectsCards
             title="React Todo - CRUD"
