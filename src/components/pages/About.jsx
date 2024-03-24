@@ -77,10 +77,12 @@ const About = () => {
             , an immersive online learning platform for web development.
           </p>
           <br />
-          Eager to contribute and grow within the tech industry, I am dedicated
-          to lifelong learning and the pursuit of excellence in design and
-          development. Let's connect and explore collaborative opportunities
-          together.
+          Additionally, I am on my path to becoming a Full-Stack Developer. So,
+          as a result I took Net Ninja's Course on Backend Development, and
+          Freecodecamp's course on CRUD, all with the MERN Stack. Added to
+          articles and project's along the way to assist my learning.
+          <br />
+          Use any of the links on the Footer to contact me let's work together.
         </div>
 
         <p className="mb-8"></p>
