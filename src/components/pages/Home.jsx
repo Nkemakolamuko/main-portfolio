@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ThemeContext } from "../../App";
 import { useContext } from "react";
+import Typewriter from "./HomeAnimate";
 
 const Home = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -29,18 +30,18 @@ const Home = () => {
         // data-theme="dark"
         data-theme={theme}
       >
-        <div className="z-0 text-center mt-[100px] md:mt-[100px]">
+        <div className="z-0 text-center mt-[100px] md:mt-[70px]">
           <span className="text-[30px] md:text-[50px] lg:text-[80px] font-[700] uppercase name">
-            Nkem Vincent Nweke
+            <Typewriter text="Nkem Vincent Nweke" />
           </span>{" "}
           <br />
-          <span className="text-[40px] lg:text-[60px] font-[600] name">
-            Frontend Developer
+          <span className="text-[37px] lg:text-[60px] font-[600] name">
+            <Typewriter text="Frontend Developer" speed={200} />
           </span>
         </div>
 
         <svg
-          className="z-10 md:h-[350px] md:w-[350px]"
+          className="z-10 h-[350px] w-[350px] md:h-[350px] md:w-[350px]"
           xmlns="http://www.w3.org/2000/svg"
           // width="350"
           // height="350"
