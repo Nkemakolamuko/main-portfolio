@@ -26,7 +26,7 @@ const Home = () => {
       {hamburger && <HeaderHamburger hideHamburger={handleHideHamburger} />}
       <ToastContainer position="top-left" />
       <div
-        className="flex flex-col items-center home gap-8 md:gap-0 h-[100vh] md:h-[93vh]"
+        className="flex flex-col items-center home gap-8 md:gap-0 h-[100vh] md:h-[91vh]"
         // data-theme="dark"
         data-theme={theme}
       >

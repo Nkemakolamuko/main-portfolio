@@ -15,7 +15,7 @@ import AllProjects from "./components/pages/components/projectPages/AllProjects"
 export const ThemeContext = createContext(null);
 
 function App() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <BrowserRouter>
