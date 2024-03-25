@@ -21,9 +21,9 @@ const BlogsCard = ({
       </p>
       <a
         href={url}
+        title={`Click to visit ${url}`}
         target="_blank"
         rel="noopener noreferrer"
-        title="Click to visit"
         className="max-w-[350px] w-[95%] h-[60%] border rounded-md bg-white flex flex-col hover:scale-95 active:scale-95 transition-all duration-300"
       >
         <div className="w-full h-[70%] rounded-t-md">
