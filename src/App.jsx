@@ -11,11 +11,12 @@ import PythonProjects from "./components/pages/components/projectPages/PythonPro
 import ReactProjects from "./components/pages/components/projectPages/ReactProjects";
 import JavaScriptProjects from "./components/pages/components/projectPages/JavaScriptProjects";
 import AllProjects from "./components/pages/components/projectPages/AllProjects";
+import PlayGround from "./components/pages/PlayGround";
 
 export const ThemeContext = createContext(null);
 
 function App() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <BrowserRouter>
@@ -37,6 +38,7 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="/articles" element={<Blog />} />
           <Route path="/skill" element={<Skills />} />
+          <Route path="/playground" element={<PlayGround />} />
         </Routes>
       </BrowserRouter>
     </ThemeContext.Provider>
