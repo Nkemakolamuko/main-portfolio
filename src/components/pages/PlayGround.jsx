@@ -3,6 +3,7 @@ import { ThemeContext } from "../../App";
 import Header from "../Header";
 import PageTitle from "../PageTitle";
 import HeaderHamburger from "./components/HeaderHamburger";
+import { ToastContainer, toast } from "react-toastify";
 
 const PlayGround = () => {
   const { theme } = useContext(ThemeContext);
@@ -33,7 +34,7 @@ const PlayGround = () => {
     const savedPosition = [...positions];
     // How I made this work ? Well I realised that the popped item is returned, and the savedPosition is updated with position being same. So I didn't have to update position with - setPosition([savedPosition]), instead I had to ...spread through it
     if (savedPosition.length === 0) {
-      setButton(true);
+      toast.error("Nothing to Undo");
       return;
     }
     const removedPosition = savedPosition.pop();
@@ -44,7 +45,7 @@ const PlayGround = () => {
   const handleRedo = () => {
     const savedPosition = rmItem.pop();
     if (!savedPosition) {
-      setButton(true);
+      toast.error("Nothing to Redo");
       return;
     }
     positions.push(savedPosition);
@@ -67,7 +68,7 @@ const PlayGround = () => {
       <div className="p-2 text-center">
         <p>Click or tap on any position to draw with circles</p>
       </div>
-
+      <ToastContainer />
       <div className="flex items-center justify-between">
         <div>
           <button
@@ -104,8 +105,8 @@ const PlayGround = () => {
             key={i}
             className={`absolute bg-blue-600 rounded-full h-4 w-4 border-4 border-blue-800`}
             style={{
-              left: position.x,
-              top: position.y,
+              left: position.x - 5,
+              top: position.y - 5,
             }}
           ></span>
         ))}

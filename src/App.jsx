@@ -16,7 +16,7 @@ import PlayGround from "./components/pages/PlayGround";
 export const ThemeContext = createContext(null);
 
 function App() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <BrowserRouter>
