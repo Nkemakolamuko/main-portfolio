@@ -85,6 +85,17 @@ const HeaderHamburger = ({ hideHamburger }) => {
             SKILLS
           </li>
         </Link>
+        <Link to="/playground" className="">
+          <li
+            className={`${
+              theme === "dark"
+                ? "bg-white text-black font-semibold"
+                : "bg-[#1e293b] text-white"
+            } active:bg-blue-500 border py-1 px-3 rounded-md active:scale-90`}
+          >
+            PLAYGROUND
+          </li>
+        </Link>
       </ul>
       <p
         className={`border rounded-full px-4 py-2 cursor-pointer ${
