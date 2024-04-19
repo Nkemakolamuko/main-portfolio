@@ -45,7 +45,7 @@ const Experience = () => {
         <ExperienceCards
           startYear="2024"
           role="Designer and Developer"
-          company="E-Cleaning Service"
+          company="E-Laundry Service"
           description="I worked on a project to assist people find nearest Dry Cleaning Service that delivers in 24 hours -."
         />
         <ExperienceCards

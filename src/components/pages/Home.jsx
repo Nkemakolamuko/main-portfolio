@@ -31,11 +31,12 @@ const Home = () => {
         data-theme={theme}
       >
         <div className="z-0 text-center mt-[100px] md:mt-[70px]">
-          <span className="text-[30px] md:text-[50px] lg:text-[80px] font-[700] uppercase name">
-            <Typewriter text="Nkem Vincent Nweke" />
+          <span className="text-[30px] md:text-[50px] lg:text-[80px] font-[700] uppercase name transition-all duration-300">
+            {/* The space before the name makes it return what I want it to - because it skips the second letter at index 1 - I wonder why */}
+            <Typewriter text="  Nkem Vincent Nweke" speed={100} />
           </span>{" "}
           <br />
-          <span className="text-[37px] lg:text-[60px] font-[600] name">
+          <span className="text-[37px] lg:text-[60px] font-[600] name transition-all duration-300">
             <Typewriter text="Frontend Developer" speed={200} />
           </span>
         </div>

@@ -99,15 +99,15 @@ const About = () => {
             }}
           >
             {/* <span ref={interests} id={interest ? "interests" : ""}></span> */}
-            <p className="transition-all duration-300 flex items-center gap-2 cursor-pointer border-l border-r hover:border-t-0 hover:border-b-0 px-2 py-1 my-4 rounded-md border-gray-600 justify-between font-light">
-              <h2 className="my-2 md:my-4 lg:my-5 font-bold text-xl md:text-2xl lg:text-2xl transition-all duration-300">
-                Interests
+            <p className="transition-all duration-300 flex items-center gap-2 cursor-pointer border-l border-r hover:border-t-0 hover:border-b-0 px-2 py-1 my-4 rounded-md border-gray-600 justify-between font-light hover:bg-slate-300 hover:border-slate-300">
+              <h2 className="my-2 md:my-2 font-bold text-base md:text-xl transition-all duration-300">
+                {interest ? "Hide Interest" : "Show Interest"}
               </h2>
               <p>
                 {interest ? (
-                  <BiSolidDownArrow className="transition-all duration-300 text-xl md:text-2xl lg:text-2xl rotate-180" />
+                  <BiSolidDownArrow className="transition-all duration-300 text-base md:text-xl rotate-180" />
                 ) : (
-                  <BiSolidDownArrow className="transition-all duration-300 text-xl md:text-2xl lg:text-2xl" />
+                  <BiSolidDownArrow className="transition-all duration-300 text-base md:text-xl " />
                 )}
               </p>
             </p>
