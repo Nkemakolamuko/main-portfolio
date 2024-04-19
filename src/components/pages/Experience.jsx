@@ -37,17 +37,23 @@ const Experience = () => {
           description="I was able to gain valuable, marketable soft and technical skill. Starting from Professional Development, Data Structures and Algorithm (DSA), HTML, CSS3, Tailwindcss, JavaScript and React. I worked with a team of 9 to develop MedEase, a medication management web App that aims at solving the forgetfulness of people when it comes to their medication and lots more."
         />
         <ExperienceCards
+          startYear="2024"
+          role="Designer and Developer"
+          company="Eazy Shoppa"
+          description="I designed and developed Eazy Shoppa - a web app that drives at helping people run their shopping errands and also provide jobs for freelancers as well."
+        />
+        <ExperienceCards
+          startYear="2024"
+          role="Designer and Developer"
+          company="E-Cleaning Service"
+          description="I worked on a project to assist people find nearest Dry Cleaning Service that delivers in 24 hours -."
+        />
+        <ExperienceCards
           startYear="2023"
           endYear=""
           role="Web Developer"
           company="Jamal Forex Hub"
           description="The Hub of millionaires. I designed and developed the Landing page for this amazing Forex Academy. With the aim of helping them reach more customers and grow their audience."
-        />
-        <ExperienceCards
-          startYear="2024"
-          role="Designer and Developer"
-          company="Eazy Shoppa"
-          description="I designed and developed Eazy Shoppa - a web app that drives at helping people run their shopping errands and also provide jobs for freelancers as well."
         />
         <ExperienceCards
           startYear="2024"
