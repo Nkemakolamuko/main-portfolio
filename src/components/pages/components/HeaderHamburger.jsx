@@ -6,15 +6,25 @@ import { ThemeContext } from "../../../App";
 const HeaderHamburger = ({ hideHamburger }) => {
   const { theme } = useContext(ThemeContext);
   return (
-    <div className="z-[99] bg-black  flex items-center justify-center mx-auto h-[100vh] top-0 sticky flex-col gap-[35px] dark">
-      <ul className="flex gap-6 flex-col text-center transition-all duration-300">
+    <div className="z-[99] bg-black flex items-center justify-center mx-auto h-[100vh] top-0 sticky flex-col gap-[35px] dark">
+      <p
+        className={`border rounded-full text-xl px-4 py-2 md:text-2xl cursor-pointer font-bold tracking-widest transition-all duration-300 ${
+          theme === "dark"
+            ? "text-white hover:text-white bg-rose-500 hover:bg-rose-600"
+            : "text-white hover:text-white bg-rose-500 hover:bg-rose-600"
+        } active:scale-90`}
+        onClick={hideHamburger}
+      >
+        X
+      </p>
+      <ul className="flex gap-2 flex-col text-center transition-all duration-300 w-full md:w-1/2 px-6">
         <Link to="/" className="">
           <li
             className={`${
               theme === "dark"
                 ? "bg-white text-black font-semibold"
                 : "bg-[#1e293b] text-white"
-            } active:bg-blue-500 border py-1 px-3 rounded-md active:scale-90`}
+            } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
           >
             HOME
           </li>
@@ -25,7 +35,7 @@ const HeaderHamburger = ({ hideHamburger }) => {
               theme === "dark"
                 ? "bg-white text-black font-semibold"
                 : "bg-[#1e293b] text-white"
-            } active:bg-blue-500 border py-1 px-3 rounded-md active:scale-90`}
+            } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
           >
             ABOUT
           </li>
@@ -36,7 +46,7 @@ const HeaderHamburger = ({ hideHamburger }) => {
               theme === "dark"
                 ? "bg-white text-black font-semibold"
                 : "bg-[#1e293b] text-white"
-            } active:bg-blue-500 border py-1 px-3 rounded-md active:scale-90`}
+            } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
           >
             PROJECTS
           </li>
@@ -47,7 +57,7 @@ const HeaderHamburger = ({ hideHamburger }) => {
               theme === "dark"
                 ? "bg-white text-black font-semibold"
                 : "bg-[#1e293b] text-white"
-            } active:bg-blue-500 border py-1 px-3 rounded-md active:scale-90`}
+            } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
           >
             EXPERIENCE
           </li>
@@ -58,7 +68,7 @@ const HeaderHamburger = ({ hideHamburger }) => {
               theme === "dark"
                 ? "bg-white text-black font-semibold"
                 : "bg-[#1e293b] text-white"
-            } active:bg-blue-500 border py-1 px-3 rounded-md active:scale-90 uppercase`}
+            } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90 uppercase`}
           >
             Résumé/CV
           </li>
@@ -69,7 +79,7 @@ const HeaderHamburger = ({ hideHamburger }) => {
               theme === "dark"
                 ? "bg-white text-black font-semibold"
                 : "bg-[#1e293b] text-white"
-            } active:bg-blue-500 border py-1 px-3 rounded-md active:scale-90`}
+            } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
           >
             ARTICLES
           </li>
@@ -80,7 +90,7 @@ const HeaderHamburger = ({ hideHamburger }) => {
               theme === "dark"
                 ? "bg-white text-black font-semibold"
                 : "bg-[#1e293b] text-white"
-            } active:bg-blue-500 border py-1 px-3 rounded-md active:scale-90`}
+            } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
           >
             SKILLS
           </li>
@@ -91,20 +101,12 @@ const HeaderHamburger = ({ hideHamburger }) => {
               theme === "dark"
                 ? "bg-white text-black font-semibold"
                 : "bg-[#1e293b] text-white"
-            } active:bg-blue-500 border py-1 px-3 rounded-md active:scale-90`}
+            } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
           >
             PLAYGROUND
           </li>
         </Link>
       </ul>
-      <p
-        className={`border rounded-full px-4 py-2 cursor-pointer ${
-          theme === "dark" ? "text-white" : "text-white bg-[#1e293b]/70"
-        } active:scale-90`}
-        onClick={hideHamburger}
-      >
-        X
-      </p>
     </div>
   );
 };

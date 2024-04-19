@@ -37,7 +37,7 @@ const Header = ({
       }  font-semibold top-0 sticky z-50 header`}
       data-theme={theme}
     >
-      <div className="transition-all duration-300 hidden md:flex lg:flex md:overflow-auto">
+      <div className="transition-all duration-300 hidden lg:flex">
         <ul className="flex items-center flex-row justify-between gap-4 mx-auto my-[0px] text-[13px] transition-all duration-200">
           <Link to="/" className=" transition-all duration-200">
             <li className="bg-black text-white px-4 py-[18px] shortName active:scale-90">
@@ -110,7 +110,7 @@ const Header = ({
         </ul>
       </div>
       {/* Hamburger */}
-      <div className="flex md:hidden lg:hidden py-[10px] items-center relative h-full">
+      <div className="flex lg:hidden py-[10px] items-center relative h-full">
         <p to="/" className="pl-3 active:scale-90" onClick={openHamburger}>
           {/* <span className="bg-black text-white px-4 py-[11px] shortName"> */}
           <GiHamburgerMenu className="w-8 h-9 cursor-pointer" />
