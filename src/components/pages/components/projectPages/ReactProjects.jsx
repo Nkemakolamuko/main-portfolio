@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import todo from "../../../../assets/todo.png";
-import eazy from "../../../../assets/eazy-shoppa-show.png";
+import eazy from "../../../../assets/eazyNew.png";
 import port from "../../../../assets/port.png";
 import cleaning from "../../../../assets/Cleaning-Service.png";
 import MEDEASE from "../../Med-Ease.png";
@@ -88,7 +88,7 @@ const ReactProjects = () => {
             image={cleaning}
             alt="Cleaning"
             link="https://247-cleaning.vercel.app/"
-            githublink="/"
+            githublink="https://github.com/Nkemakolamuko/e-cleaning-frontend"
           />
 
           <ProjectsCards

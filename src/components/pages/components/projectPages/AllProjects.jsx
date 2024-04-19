@@ -4,7 +4,8 @@ import PageTitle from "../../../PageTitle";
 import Footer from "../../../Footer";
 import ProjectsCards from "../../components/ProjectsCards";
 import MEDEASE from "../../Med-Ease.png";
-import eazy from "../../../../assets/eazy-shoppa-show.png";
+import eazy from "../../../../assets/eazyNew.png";
+import cleaning from "../../../../assets/Cleaning-Service.png";
 import SportsNews from "../../Sports-News.png";
 import VideoDownloader from "../../Video-Downloader.png";
 import JamalFX from "../../JamalFX.png";
@@ -84,6 +85,14 @@ const AllProjects = () => {
       <div className="mx-4 pb-28">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 md:gap-6">
           {/* Turn to component */}
+
+          <ProjectsCards
+            title="Online Cleaning Service - Full Stack App"
+            image={cleaning}
+            alt="Cleaning"
+            link="https://247-cleaning.vercel.app/"
+            githublink="https://github.com/Nkemakolamuko/e-cleaning-frontend"
+          />
 
           <ProjectsCards
             title="Eazy Shoppa - Full Stack App"
