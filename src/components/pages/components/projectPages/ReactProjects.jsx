@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import todo from "../../../../assets/todo.png";
 import eazy from "../../../../assets/eazy-shoppa-show.png";
 import port from "../../../../assets/port.png";
+import cleaning from "../../../../assets/Cleaning-Service.png";
 import MEDEASE from "../../Med-Ease.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -81,6 +82,14 @@ const ReactProjects = () => {
       <div className="mx-4 pb-28">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 md:gap-6">
           {/* Turn to component */}
+
+          <ProjectsCards
+            title="Online Cleaning Service - Full Stack App"
+            image={cleaning}
+            alt="Cleaning"
+            link="https://247-cleaning.vercel.app/"
+            githublink="/"
+          />
 
           <ProjectsCards
             title="MedEaseApp - Full Stack App"
