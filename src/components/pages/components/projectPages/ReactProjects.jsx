@@ -16,6 +16,7 @@ import Header from "../../../Header";
 import PageTitle from "../../../PageTitle";
 import Footer from "../../../Footer";
 import HeaderHamburger from "../HeaderHamburger";
+import JFHNEW from "../../../../assets/JFHNEW.png";
 
 const ReactProjects = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -82,6 +83,14 @@ const ReactProjects = () => {
       <div className="mx-4 pb-28">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 md:gap-6">
           {/* Turn to component */}
+
+          <ProjectsCards
+            title="Jamal Forex Hub 2.0"
+            image={JFHNEW}
+            alt="JFH"
+            link="https://jfhub.vercel.app/"
+            githublink="https://github.com/Nkemakolamuko/"
+          />
 
           <ProjectsCards
             title="Online Cleaning Service - Full Stack App"

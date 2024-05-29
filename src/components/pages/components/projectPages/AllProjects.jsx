@@ -19,6 +19,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { MdArrowDropDown, MdArrowDropUp } from "react-icons/md";
 import { ThemeContext } from "../../../../App";
+import JFHNEW from "../../../../assets/JFHNEW.png";
 
 const AllProjects = () => {
   const { theme } = useContext(ThemeContext);
@@ -87,13 +88,19 @@ const AllProjects = () => {
           {/* Turn to component */}
 
           <ProjectsCards
+            title="Jamal Forex Hub 2.0"
+            image={JFHNEW}
+            alt="JFH"
+            link="https://jfhub.vercel.app/"
+            githublink="https://github.com/Nkemakolamuko/"
+          />
+          <ProjectsCards
             title="Online Cleaning Service - Full Stack App"
             image={cleaning}
             alt="Cleaning"
             link="https://247-cleaning.vercel.app/"
             githublink="https://github.com/Nkemakolamuko/e-cleaning-frontend"
           />
-
           <ProjectsCards
             title="Eazy Shoppa - Full Stack App"
             image={eazy}
@@ -117,7 +124,7 @@ const AllProjects = () => {
             githublink="https://github.com/Nkemakolamuko/sports-news"
           />
           <ProjectsCards
-            title="Jamal Forex Hub"
+            title="Jamal Forex Hub 1.0"
             image={JamalFX}
             alt="JFH"
             link="https://jamal-forex-hub.vercel.app/"
