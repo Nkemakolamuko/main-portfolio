@@ -37,10 +37,13 @@ const Skills = () => {
           skills="ReactJS - Firebase - TailwindCSS - Express - MongoDB"
           SkillName="Frameworks"
         />
-        <SkillsCard skills="Figma - Git - GitHub" SkillName="Tools" />
+        <SkillsCard
+          skills="Figma - Git - GitHub - Framer Motion"
+          SkillName="Tools"
+        />
 
         <SkillsCard
-          skills="Public Speaking - Good Communication - Learns Fast - Adapts Easily - Outspoken"
+          skills="Public Speaking - Good Communication - Learns Fast - Adapts Easily - Outspoken - Enthusiastic"
           SkillName="Soft Skills"
         />
 

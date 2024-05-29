@@ -1,45 +1,44 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import Header from "../Header";
 import PageTitle from "../PageTitle";
 import PFP from "./PFP.jpg";
 import Footer from "../Footer";
 import { BiSolidDownArrow } from "react-icons/bi";
 import HeaderHamburger from "./components/HeaderHamburger";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ThemeContext } from "../../App";
-import { useContext } from "react";
 
 const About = () => {
-  const { theme, setTheme } = useContext(ThemeContext);
-  const [interest, setInterests] = useState(false);
-  const interests = useRef(null);
+  const { theme } = useContext(ThemeContext);
+  const [isInterestVisible, setIsInterestVisible] = useState(false);
+  const [isHamburgerVisible, setIsHamburgerVisible] = useState(false);
+  const interestsRef = useRef(null);
 
-  const [hamburger, setHamburger] = useState(false);
-  // const [theme, setTheme] = useState("dark");
-
-  const handleOpenHamburger = () => {
-    setHamburger(true);
-  };
-
-  const handleHideHamburger = () => {
-    setHamburger(false);
+  const toggleHamburger = () => setIsHamburgerVisible(!isHamburgerVisible);
+  const toggleInterests = () => {
+    setIsInterestVisible(!isInterestVisible);
+    if (!isInterestVisible) {
+      interestsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
-    <div className="dark" data-theme={theme}>
-      <Header openHamburger={handleOpenHamburger} activeAbout={true} />
-      {hamburger && <HeaderHamburger hideHamburger={handleHideHamburger} />}
+    <div className={theme}>
+      <Header openHamburger={toggleHamburger} activeAbout={true} />
+      {isHamburgerVisible && (
+        <HeaderHamburger hideHamburger={toggleHamburger} />
+      )}
       <ToastContainer position="top-left" />
       <PageTitle title="About" />
       <div className="max-w-3xl mx-auto pb-28 px-4 md:px-0 lg:px-0">
-        <div className="float-start md:float-left lg:float-left mb-[20px] mr-[20px] ">
+        <div className="float-start md:float-left lg:float-left mb-[20px] mr-[20px]">
           <img
             src={PFP}
             width={400}
             height={400}
             alt="My Picture"
-            className="transition-all duration-300 rounded-b-md shadow-md hover:shadow-black/10   "
+            className="transition-all duration-300 rounded-b-md shadow-md hover:shadow-black/10"
           />
         </div>
         <div className="font-light leading-[30px]">
@@ -53,34 +52,45 @@ const About = () => {
           <p>
             I've worked as a call rep for{" "}
             <span className="font-bold text-blue-500 hover:text-blue-600 underline underline-offset-1">
-              <a href="https://beta.cepay.me/" target="_blank">
+              <a
+                href="https://beta.cepay.me/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 CEPAY
               </a>
             </span>
             , a fintech company. I studied and also interned for over 26 weeks
             at{" "}
             <span className="font-bold text-blue-500 hover:text-blue-600 underline underline-offset-1">
-              <a href="https://tiidelab-main.vercel.app/" target="_blank">
+              <a
+                href="https://tiidelab-main.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 TIIDELab Initiative
               </a>
             </span>{" "}
             as a Frontend Developer, and gained valuable hands-on experience at
             honing my skills in software development, UI/UX using Figma, Team
-            Collaboration and Soft Skills.
-            <br /> <br /> Additionally, I have completed over 70% of my
+            Collaboration, and Soft Skills.
+            <br /> <br /> Additionally, I have completed over 75% of my
             coursework with{" "}
             <span className="font-bold text-blue-500 hover:text-blue-600 underline underline-offset-1">
-              <a href="https://www.theodinproject.com/" target="_blank">
+              <a
+                href="https://www.theodinproject.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 The Odin Project
               </a>
             </span>
             , an immersive online learning platform for web development.
           </p>
           <br />
-          Additionally, I am on my path to becoming a Full-Stack Developer. So,
-          as a result I took Net Ninja's Course on Backend Development, and
-          Freecodecamp's course on CRUD, all with the MERN Stack. Added to
-          articles and project's along the way to assist my learning.
+          Additionally, I am on my path to becoming a Full-Stack MERN Developer.
+          So, as a result, I've taken courses on Backend Development and built a
+          number of projects.
           <br />
           Use any of the links on the Footer to contact me let's work together.
         </div>
@@ -90,30 +100,20 @@ const About = () => {
         <p className="mb-8"></p>
 
         <div className="resume-section-content font-light leading-[30px]">
-          <button
-            onClick={() => {
-              interests.current?.scrollIntoView({
-                behavior: "smooth",
-              });
-              setInterests(!interest);
-            }}
-          >
-            {/* <span ref={interests} id={interest ? "interests" : ""}></span> */}
+          <button onClick={toggleInterests}>
             <p className="transition-all duration-300 flex items-center gap-2 cursor-pointer border-l border-r hover:border-t-0 hover:border-b-0 px-2 py-1 my-4 rounded-md border-gray-600 justify-between font-light hover:bg-slate-300 hover:border-slate-300">
               <h2 className="my-2 md:my-2 font-bold text-base md:text-xl transition-all duration-300">
-                {interest ? "Hide Interest" : "Show Interest"}
+                {isInterestVisible ? "Hide Interests" : "Show Interests"}
               </h2>
-              <p>
-                {interest ? (
-                  <BiSolidDownArrow className="transition-all duration-300 text-base md:text-xl rotate-180" />
-                ) : (
-                  <BiSolidDownArrow className="transition-all duration-300 text-base md:text-xl " />
-                )}
-              </p>
+              <BiSolidDownArrow
+                className={`transition-all duration-300 text-base md:text-xl ${
+                  isInterestVisible ? "rotate-180" : ""
+                }`}
+              />
             </p>
           </button>
-          {interest && (
-            <div ref={interests} id={interest ? "interests" : ""}>
+          {isInterestVisible && (
+            <div ref={interestsRef} id="interests">
               <p className="mb-4">
                 As a Frontend Developer, I am passionate about honing my skills
                 and staying up-to-date with the latest technologies and trends
@@ -121,7 +121,6 @@ const About = () => {
                 further enhance my knowledge and creativity. Here are some of my
                 interests:
               </p>
-
               <ol>
                 <li>
                   <p className="mb-4">
@@ -159,12 +158,10 @@ const About = () => {
                   </p>
                 </li>
               </ol>
-
               <p className="mb-4">
                 When I do venture outdoors, I engage in activities that promote
                 physical well-being and balance. These activities include:
               </p>
-
               <ol>
                 <li>
                   <p className="mb-4">
@@ -193,7 +190,6 @@ const About = () => {
                   </p>
                 </li>
               </ol>
-
               <p className="mb-4">
                 By combining my passion for web development with diverse
                 interests and outdoor activities, I strive to maintain a
