@@ -6,107 +6,109 @@ import { ThemeContext } from "../../../App";
 const HeaderHamburger = ({ hideHamburger }) => {
   const { theme } = useContext(ThemeContext);
   return (
-    <div className="z-[99] bg-black flex items-center justify-center mx-auto h-[100vh] top-0 sticky flex-col gap-[35px] dark">
+    <div className="z-[99] h-[100vh] top-0 fixed bg-black/50 w-[100%]">
       <p
-        className={`border rounded-full text-xl px-4 py-2 md:text-2xl cursor-pointer font-bold tracking-widest transition-all duration-300 ${
-          theme === "dark"
-            ? "text-white hover:text-white bg-rose-500 hover:bg-rose-600"
-            : "text-white hover:text-white bg-rose-500 hover:bg-rose-600"
-        } active:scale-90`}
+        className={`absolute right-2 border rounded-full top-4 text-2xl px-4 py-2 md:text-2xl cursor-pointer font-bold tracking-widest text-slate-200 transition-all duration-300 active:scale-90`}
         onClick={hideHamburger}
       >
         X
       </p>
-      <ul className="flex gap-2 flex-col text-center transition-all duration-300 w-full md:w-1/2 px-6">
-        <Link to="/" className="">
-          <li
-            className={`${
-              theme === "dark"
-                ? "bg-white text-black font-semibold"
-                : "bg-[#1e293b] text-white"
-            } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
-          >
-            HOME
-          </li>
-        </Link>
-        <Link to="/about" className="">
-          <li
-            className={`${
-              theme === "dark"
-                ? "bg-white text-black font-semibold"
-                : "bg-[#1e293b] text-white"
-            } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
-          >
-            ABOUT
-          </li>
-        </Link>
-        <Link to="/projects" className="">
-          <li
-            className={`${
-              theme === "dark"
-                ? "bg-white text-black font-semibold"
-                : "bg-[#1e293b] text-white"
-            } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
-          >
-            PROJECTS
-          </li>
-        </Link>
-        <Link to="/experience" className="">
-          <li
-            className={`${
-              theme === "dark"
-                ? "bg-white text-black font-semibold"
-                : "bg-[#1e293b] text-white"
-            } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
-          >
-            EXPERIENCE
-          </li>
-        </Link>
-        <Link to="/resume" className="">
-          <li
-            className={`${
-              theme === "dark"
-                ? "bg-white text-black font-semibold"
-                : "bg-[#1e293b] text-white"
-            } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90 uppercase`}
-          >
-            Résumé/CV
-          </li>
-        </Link>
-        <Link to="/articles" className="">
-          <li
-            className={`${
-              theme === "dark"
-                ? "bg-white text-black font-semibold"
-                : "bg-[#1e293b] text-white"
-            } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
-          >
-            ARTICLES
-          </li>
-        </Link>
-        <Link to="/skill" className="">
-          <li
-            className={`${
-              theme === "dark"
-                ? "bg-white text-black font-semibold"
-                : "bg-[#1e293b] text-white"
-            } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
-          >
-            SKILLS
-          </li>
-        </Link>
-        <Link to="/playground" className="">
-          <li
-            className={`${
-              theme === "dark"
-                ? "bg-white text-black font-semibold"
-                : "bg-[#1e293b] text-white"
-            } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
-          >
-            PLAYGROUND
-          </li>
-        </Link>
-      </ul>
+      <div
+        className="z-[99] flex py-8 h-[100vh] top-0 fixed flex-col dark w-[82%] shadow-lg border-r px-4"
+        data-theme={theme}
+      >
+        <p className="py-2 mb-2 border-b">Nkem Vincent Nweke</p>
+        <ul className="flex gap-2 flex-col text-sm transition-all duration-300 w-[100%] md:w-1/2 py-4">
+          <Link to="/" className="">
+            <li
+              className={`shadow ${
+                theme === "dark"
+                  ? "bg-white text-black font-semibold"
+                  : "bg-[#0000f1] text-white"
+              } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
+            >
+              HOME
+            </li>
+          </Link>
+          <Link to="/about" className="">
+            <li
+              className={`shadow ${
+                theme === "dark"
+                  ? "bg-white text-black font-semibold"
+                  : "bg-[#0000f1] text-white"
+              } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
+            >
+              ABOUT
+            </li>
+          </Link>
+          <Link to="/projects" className="">
+            <li
+              className={`shadow ${
+                theme === "dark"
+                  ? "bg-white text-black font-semibold"
+                  : "bg-[#0000f1] text-white"
+              } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
+            >
+              PROJECTS
+            </li>
+          </Link>
+          <Link to="/experience" className="">
+            <li
+              className={`shadow ${
+                theme === "dark"
+                  ? "bg-white text-black font-semibold"
+                  : "bg-[#0000f1] text-white"
+              } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
+            >
+              EXPERIENCE
+            </li>
+          </Link>
+          <Link to="/resume" className="">
+            <li
+              className={`shadow ${
+                theme === "dark"
+                  ? "bg-white text-black font-semibold"
+                  : "bg-[#0000f1] text-white"
+              } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90 uppercase`}
+            >
+              Résumé/CV
+            </li>
+          </Link>
+          <Link to="/articles" className="">
+            <li
+              className={`shadow ${
+                theme === "dark"
+                  ? "bg-white text-black font-semibold"
+                  : "bg-[#0000f1] text-white"
+              } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
+            >
+              ARTICLES
+            </li>
+          </Link>
+          <Link to="/skill" className="">
+            <li
+              className={`shadow ${
+                theme === "dark"
+                  ? "bg-white text-black font-semibold"
+                  : "bg-[#0000f1] text-white"
+              } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
+            >
+              SKILLS
+            </li>
+          </Link>
+          <Link to="/playground" className="">
+            <li
+              className={`shadow ${
+                theme === "dark"
+                  ? "bg-white text-black font-semibold"
+                  : "bg-[#0000f1] text-white"
+              } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
+            >
+              PLAYGROUND
+            </li>
+          </Link>
+        </ul>
+      </div>
     </div>
   );
 };

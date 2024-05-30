@@ -33,7 +33,7 @@ const Header = ({
   return (
     <nav
       className={`flex justify-between items-center ${
-        theme === "light" ? "shadow-lg" : "shadow-lg shadow-white/80"
+        theme === "light" ? "shadow-lg" : "shadow shadow-white/80"
       }  font-semibold top-0 sticky z-50 header`}
       data-theme={theme}
     >
@@ -110,23 +110,24 @@ const Header = ({
         </ul>
       </div>
       {/* Hamburger */}
-      <div className="flex lg:hidden py-[10px] items-center relative h-full">
+      <div className="flex lg:hidden md:py-[10px] items-end relative h-full">
         <p to="/" className="pl-3 active:scale-90" onClick={openHamburger}>
           {/* <span className="bg-black text-white px-4 py-[11px] shortName"> */}
           <GiHamburgerMenu className="w-8 h-9 cursor-pointer" />
           {/* </span> */}
         </p>
+        <p className="pb-1 pl-4">NVN</p>
       </div>
-      <div className="px-4 py-[7px] md:px-4 md:py-2 lg:py-2 lg:px-4 flex gap-2 items-center ">
+      <div className="px-4 py-[7px] md:px-4 md:py-2 lg:py-2 lg:px-4 flex gap-1 md:gap-2 items-center ">
         <p
-          className="bg-white border text-black rounded-full p-1 md:p-2 lg:p-2 cursor-pointer"
+          className="bg-white border text-black rounded-full p-2 md:p-2 lg:p-2 cursor-pointer"
           onClick={toggleThemeLight}
         >
           <MdOutlineLightMode />
         </p>
         <p>Theme</p>
         <p
-          className="bg-black border text-white rounded-full p-1 md:p-2 lg:p-2 cursor-pointer"
+          className="bg-black border text-white rounded-full p-2 md:p-2 lg:p-2 cursor-pointer"
           onClick={toggleThemeDark}
         >
           <CiDark />

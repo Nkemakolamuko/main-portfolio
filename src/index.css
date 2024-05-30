@@ -6,6 +6,7 @@
 
 * {
   font-family: "Poppins", sans-serif;
+  scrollbar-width: none;
 }
 
 :root {
@@ -18,7 +19,7 @@
 
 /* Change to dark for when I wanna fix dark mode */
 [data-theme="dark"] {
-  --background-color: #1e293b;
+  --background-color: #000c3b;
   --secondary-background-color: white;
   --primary-text-color: white;
   --secondary-text-color: black;

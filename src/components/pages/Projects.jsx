@@ -85,8 +85,10 @@ const Projects = () => {
           </div>
         )}
       </div>
-      <div className="px-2 text-center md:w-[600px] container mx-auto h-[70vh] md:h-[60vh] flex items-center justify-center text-lg">
-        <p>Select from different project category for easy browse through.</p>
+      <div className="px-2 text-center md:w-[600px] container mx-auto h-[70vh] md:h-[60vh] flex items-center justify-center">
+        <p>
+          Select from different project category above for easy browse through.
+        </p>
       </div>
       <Footer />
     </div>

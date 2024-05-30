@@ -21,7 +21,7 @@ const Home = () => {
   };
 
   return (
-    <div className="home">
+    <div className="home h-screen" data-theme={theme}>
       <Header openHamburger={handleOpenHamburger} />
       {hamburger && <HeaderHamburger hideHamburger={handleHideHamburger} />}
       <ToastContainer position="top-left" />
@@ -36,8 +36,8 @@ const Home = () => {
             <Typewriter text="  Nkem Vincent Nweke" speed={100} />
           </span>{" "}
           <br />
-          <span className="text-[37px] lg:text-[60px] font-[600] name transition-all duration-300">
-            <Typewriter text="Frontend Developer" speed={200} />
+          <span className="text-[24px] lg:text-[60px] font-[600] name transition-all duration-300">
+            <Typewriter text="  Frontend React Developer" speed={200} />
           </span>
         </div>
 

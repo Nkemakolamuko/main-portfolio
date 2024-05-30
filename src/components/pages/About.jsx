@@ -24,7 +24,7 @@ const About = () => {
   };
 
   return (
-    <div className={theme}>
+    <div className="dark" data-theme={theme}>
       <Header openHamburger={toggleHamburger} activeAbout={true} />
       {isHamburgerVisible && (
         <HeaderHamburger hideHamburger={toggleHamburger} />
@@ -101,7 +101,7 @@ const About = () => {
 
         <div className="resume-section-content font-light leading-[30px]">
           <button onClick={toggleInterests}>
-            <p className="transition-all duration-300 flex items-center gap-2 cursor-pointer border-l border-r hover:border-t-0 hover:border-b-0 px-2 py-1 my-4 rounded-md border-gray-600 justify-between font-light hover:bg-slate-300 hover:border-slate-300">
+            <p className="transition-all duration-300 flex items-center gap-2 cursor-pointer border-l border-r hover:border-t-0 hover:border-b-0 px-2 py-1 my-4 rounded-md border-gray-600 justify-between outline-none font-light hover:bg-slate-300 hover:border-slate-300">
               <h2 className="my-2 md:my-2 font-bold text-base md:text-xl transition-all duration-300">
                 {isInterestVisible ? "Hide Interests" : "Show Interests"}
               </h2>
