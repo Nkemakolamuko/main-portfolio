@@ -2,23 +2,24 @@ import React from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../../../App";
+import { FaTimes } from "react-icons/fa";
 
 const HeaderHamburger = ({ hideHamburger }) => {
   const { theme } = useContext(ThemeContext);
   return (
     <div className="z-[99] h-[100vh] top-0 fixed bg-black/50 w-[100%]">
       <p
-        className={`absolute right-2 border rounded-full top-4 text-2xl px-4 py-2 md:text-2xl cursor-pointer font-bold tracking-widestnsition-all duration-300`}
+        className={`absolute right-4 rounded-full top-4 text-3xl cursor-pointer font-bold tracking-widest text-white transition-all duration-300`}
         onClick={hideHamburger}
       >
-        X
+        <FaTimes />
       </p>
       <div
-        className="z-[99] flex py-8 h-[100vh] top-0 fixed flex-col dark w-[82%] shadow-lg border-r px-4"
+        className="z-[99] flex py-2 h-[100vh] top-0 fixed flex-col dark w-[80%] shadow-lg border-r px-4 divide-y-2"
         data-theme={theme}
       >
-        <p className="py-2 mb-2 border-b">Nkem Vincent Nweke</p>
-        <ul className="flex gap-2 flex-col text-sm transition-all duration-300 w-[100%] md:w-1/2 py-4">
+        <p className="py-2">Nkem Vincent Nweke</p>
+        <ul className="flex gap-2 flex-col text-sm transition-all duration-300 w-[100%] md:w-1/2 py-2">
           <Link to="/" className="">
             <li
               className={`shadow ${

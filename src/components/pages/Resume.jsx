@@ -39,7 +39,7 @@ const Resume = () => {
       <ToastContainer position="top-left" />
       <PageTitle title="Résumé" />
       {cvLoaded ? (
-        <div className="flex flex-col max-w-3xl mx-auto pb-28 items-center gap-4 transition-all duration-300">
+        <div className="flex flex-col max-w-3xl h-full mx-auto pb-28 items-center gap-4 transition-all duration-300">
           <img src={IMG} alt="My CV" />
           <a
             href="https://drive.google.com/file/d/1OkMCuzwt3q4ANSNIVGamXBl29aLju5H1/view?usp=sharing"
