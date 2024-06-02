@@ -1,11 +1,23 @@
-import React from "react";
-import { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { ThemeContext } from "../../../App";
 import { FaTimes } from "react-icons/fa";
 
 const HeaderHamburger = ({ hideHamburger }) => {
   const { theme } = useContext(ThemeContext);
+  const location = useLocation();
+
+  const links = [
+    { to: "/", text: "HOME" },
+    { to: "/about", text: "ABOUT" },
+    { to: "/projects", text: "PROJECTS" },
+    { to: "/experience", text: "EXPERIENCE" },
+    { to: "/resume", text: "RÉSUMÉ/CV" },
+    { to: "/articles", text: "ARTICLES" },
+    { to: "/skill", text: "SKILLS" },
+    { to: "/playground", text: "PLAYGROUND" },
+  ];
+
   return (
     <div className="z-[99] h-[100vh] top-0 fixed bg-black/50 w-[100%]">
       <p
@@ -20,94 +32,23 @@ const HeaderHamburger = ({ hideHamburger }) => {
       >
         <p className="py-2">Nkem Vincent Nweke</p>
         <ul className="flex gap-2 flex-col text-sm transition-all duration-300 w-[100%] md:w-1/2 py-2">
-          <Link to="/" className="">
-            <li
-              className={`shadow ${
-                theme === "dark"
-                  ? "bg-white text-black font-semibold"
-                  : "bg-[#0000f1] text-white"
-              } border py-3 px-3 rounded-md`}
-            >
-              HOME
-            </li>
-          </Link>
-          <Link to="/about" className="">
-            <li
-              className={`shadow ${
-                theme === "dark"
-                  ? "bg-white text-black font-semibold"
-                  : "bg-[#0000f1] text-white"
-              } border py-3 px-3 rounded-md`}
-            >
-              ABOUT
-            </li>
-          </Link>
-          <Link to="/projects" className="">
-            <li
-              className={`shadow ${
-                theme === "dark"
-                  ? "bg-white text-black font-semibold"
-                  : "bg-[#0000f1] text-white"
-              } border py-3 px-3 rounded-md`}
-            >
-              PROJECTS
-            </li>
-          </Link>
-          <Link to="/experience" className="">
-            <li
-              className={`shadow ${
-                theme === "dark"
-                  ? "bg-white text-black font-semibold"
-                  : "bg-[#0000f1] text-white"
-              } border py-3 px-3 rounded-md`}
-            >
-              EXPERIENCE
-            </li>
-          </Link>
-          <Link to="/resume" className="">
-            <li
-              className={`shadow ${
-                theme === "dark"
-                  ? "bg-white text-black font-semibold"
-                  : "bg-[#0000f1] text-white"
-              } border py-3 px-3 rounded-md uppercase`}
-            >
-              Résumé/CV
-            </li>
-          </Link>
-          <Link to="/articles" className="">
-            <li
-              className={`shadow ${
-                theme === "dark"
-                  ? "bg-white text-black font-semibold"
-                  : "bg-[#0000f1] text-white"
-              } border py-3 px-3 rounded-md`}
-            >
-              ARTICLES
-            </li>
-          </Link>
-          <Link to="/skill" className="">
-            <li
-              className={`shadow ${
-                theme === "dark"
-                  ? "bg-white text-black font-semibold"
-                  : "bg-[#0000f1] text-white"
-              } border py-3 px-3 rounded-md`}
-            >
-              SKILLS
-            </li>
-          </Link>
-          <Link to="/playground" className="">
-            <li
-              className={`shadow ${
-                theme === "dark"
-                  ? "bg-white text-black font-semibold"
-                  : "bg-[#0000f1] text-white"
-              } border py-3 px-3 rounded-md`}
-            >
-              PLAYGROUND
-            </li>
-          </Link>
+          {links.map((link) => (
+            <Link key={link.to} to={link.to} className="">
+              <li
+                className={`shadow ${
+                  location.pathname === link.to
+                    ? theme === "dark"
+                      ? "bg-[#020933] text-white"
+                      : "bg-[#020933] text-white"
+                    : theme === "dark"
+                    ? "bg-[#0000f0] text-white"
+                    : "bg-[#0000f1] text-white"
+                } border py-3 px-3 rounded-md`}
+              >
+                {link.text}
+              </li>
+            </Link>
+          ))}
         </ul>
       </div>
     </div>
