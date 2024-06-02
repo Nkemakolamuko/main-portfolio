@@ -8,7 +8,7 @@ const HeaderHamburger = ({ hideHamburger }) => {
   return (
     <div className="z-[99] h-[100vh] top-0 fixed bg-black/50 w-[100%]">
       <p
-        className={`absolute right-2 border rounded-full top-4 text-2xl px-4 py-2 md:text-2xl cursor-pointer font-bold tracking-widest text-slate-200 transition-all duration-300 active:scale-90`}
+        className={`absolute right-2 border rounded-full top-4 text-2xl px-4 py-2 md:text-2xl cursor-pointer font-bold tracking-widestnsition-all duration-300`}
         onClick={hideHamburger}
       >
         X
@@ -25,7 +25,7 @@ const HeaderHamburger = ({ hideHamburger }) => {
                 theme === "dark"
                   ? "bg-white text-black font-semibold"
                   : "bg-[#0000f1] text-white"
-              } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
+              } border py-3 px-3 rounded-md`}
             >
               HOME
             </li>
@@ -36,7 +36,7 @@ const HeaderHamburger = ({ hideHamburger }) => {
                 theme === "dark"
                   ? "bg-white text-black font-semibold"
                   : "bg-[#0000f1] text-white"
-              } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
+              } border py-3 px-3 rounded-md`}
             >
               ABOUT
             </li>
@@ -47,7 +47,7 @@ const HeaderHamburger = ({ hideHamburger }) => {
                 theme === "dark"
                   ? "bg-white text-black font-semibold"
                   : "bg-[#0000f1] text-white"
-              } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
+              } border py-3 px-3 rounded-md`}
             >
               PROJECTS
             </li>
@@ -58,7 +58,7 @@ const HeaderHamburger = ({ hideHamburger }) => {
                 theme === "dark"
                   ? "bg-white text-black font-semibold"
                   : "bg-[#0000f1] text-white"
-              } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
+              } border py-3 px-3 rounded-md`}
             >
               EXPERIENCE
             </li>
@@ -69,7 +69,7 @@ const HeaderHamburger = ({ hideHamburger }) => {
                 theme === "dark"
                   ? "bg-white text-black font-semibold"
                   : "bg-[#0000f1] text-white"
-              } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90 uppercase`}
+              } border py-3 px-3 rounded-md uppercase`}
             >
               Résumé/CV
             </li>
@@ -80,7 +80,7 @@ const HeaderHamburger = ({ hideHamburger }) => {
                 theme === "dark"
                   ? "bg-white text-black font-semibold"
                   : "bg-[#0000f1] text-white"
-              } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
+              } border py-3 px-3 rounded-md`}
             >
               ARTICLES
             </li>
@@ -91,7 +91,7 @@ const HeaderHamburger = ({ hideHamburger }) => {
                 theme === "dark"
                   ? "bg-white text-black font-semibold"
                   : "bg-[#0000f1] text-white"
-              } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
+              } border py-3 px-3 rounded-md`}
             >
               SKILLS
             </li>
@@ -102,7 +102,7 @@ const HeaderHamburger = ({ hideHamburger }) => {
                 theme === "dark"
                   ? "bg-white text-black font-semibold"
                   : "bg-[#0000f1] text-white"
-              } active:bg-blue-500 border py-3 px-3 rounded-md active:scale-90`}
+              } border py-3 px-3 rounded-md`}
             >
               PLAYGROUND
             </li>

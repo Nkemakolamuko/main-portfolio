@@ -32,16 +32,16 @@ const About = () => {
       <ToastContainer position="top-left" />
       <PageTitle title="About" />
       <div className="max-w-3xl mx-auto pb-28 px-4 md:px-0 lg:px-0">
-        <div className="float-start md:float-left lg:float-left mb-[20px] mr-[20px]">
+        <div className="float-start md:float-left lg:float-left mr-[20px] md:w-[350px] w-full md:mb-0 mb-4">
           <img
             src={PFP}
-            width={400}
-            height={400}
+            // width={400}
+            // height={400}
             alt="My Picture"
-            className="transition-all duration-300 rounded-b-md shadow-md hover:shadow-black/10"
+            className="transition-all duration-300 md:rounded-b-r shadow-md hover:shadow-black/10 w-full"
           />
         </div>
-        <div className="font-light leading-[30px]">
+        <div className="font-light leading-[30px] border rounded mt-2 p-2">
           <p className="py-4">
             Hello there!!{" "}
             <span className="font-bold text-[#F66B0E]">Nkem Vincent Nweke</span>{" "}
@@ -95,11 +95,8 @@ const About = () => {
           Use any of the links on the Footer to contact me let's work together.
         </div>
 
-        <p className="mb-8"></p>
-        <hr />
-        <p className="mb-8"></p>
-
-        <div className="resume-section-content font-light leading-[30px]">
+        {/* Interest */}
+        <div className="resume-section-content font-light leading-[30px] my-2 px-2 border rounded">
           <button onClick={toggleInterests}>
             <p className="transition-all duration-300 flex items-center gap-2 cursor-pointer border-l border-r hover:border-t-0 hover:border-b-0 px-2 py-1 my-4 rounded-md border-gray-600 justify-between outline-none font-light hover:bg-slate-300 hover:border-slate-300">
               <h2 className="my-2 md:my-2 font-bold text-base md:text-xl transition-all duration-300">

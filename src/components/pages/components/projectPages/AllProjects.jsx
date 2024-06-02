@@ -84,7 +84,7 @@ const AllProjects = () => {
         )}
       </div>
       <div className="mx-4 pb-28">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2 md:gap-6 mb-2">
           {/* Turn to component */}
 
           <ProjectsCards
