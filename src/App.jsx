@@ -1,4 +1,4 @@
-import { useState, createContext } from "react";
+import { useState, createContext, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
@@ -16,7 +16,18 @@ import PlayGround from "./components/pages/PlayGround";
 export const ThemeContext = createContext(null);
 
 function App() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(
+    JSON.parse(localStorage.getItem("theme")) || "light"
+  );
+
+  useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(theme));
+  }, [theme]);
+
+  useEffect(() => {
+    const savedTheme = JSON.parse(localStorage.getItem("theme"));
+    setTheme(savedTheme);
+  }, [theme]);
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <BrowserRouter>
