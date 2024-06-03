@@ -15,7 +15,7 @@ const Footer = ({ style }) => {
       style={style}
     >
       <p className="hidden md:flex text-sm md:text-sm lg:text-sm text-gray-00">
-        NVN © {new Date().getFullYear()}
+        Nkem Vincent Nweke © {new Date().getFullYear()}
       </p>
       <div className="w-full md:w-[20%]">
         <ul className="flex items-center flex-row md:justify-between md:gap-6 gap-0 w-full divide-x md:divide-x-0">

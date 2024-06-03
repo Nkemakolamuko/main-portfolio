@@ -26,10 +26,10 @@ const Resume = () => {
   };
 
   useEffect(() => {
-    // setCVLoaded(true);
-    setTimeout(() => {
-      setCVLoaded(true);
-    }, 2000);
+    setCVLoaded(true);
+    // setTimeout(() => {
+    //   setCVLoaded(true);
+    // }, 2000);
   }, []);
 
   return (
@@ -38,7 +38,7 @@ const Resume = () => {
       {hamburger && <HeaderHamburger hideHamburger={handleHideHamburger} />}
       <ToastContainer position="top-left" />
       <PageTitle title="Résumé" />
-      {cvLoaded ? (
+      {!cvLoaded ? (
         <div className="flex flex-col max-w-3xl h-full mx-auto pb-28 items-center gap-4 transition-all duration-300">
           <img src={IMG} alt="My CV" />
           <a
@@ -54,7 +54,9 @@ const Resume = () => {
         </div>
       ) : (
         <div className="w-[full] h-[65vh] flex items-center justify-center">
-          Loading...
+          Currently being updated... <br />
+          Available on request.
+          {/* I'd bring back loading text and uncomment the commented out code on useEffect as well to take the code back to what it was */}
         </div>
       )}
 
