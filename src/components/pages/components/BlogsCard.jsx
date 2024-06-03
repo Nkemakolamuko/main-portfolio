@@ -14,7 +14,7 @@ const BlogsCard = ({
   // img,
 }) => {
   return (
-    <div className="max-w-[350px] w-full h-[100%] border flex items-center justify-center rounded-b-[4px] rounded-t-[15px] bg-slate-100 flex-col text-slate-600 shadow-lg hover:shadow-black/50 transition-all duration-300">
+    <div className="max-w-[350px] w-full h-[100%] border flex items-center justify-center bg-slate-100 flex-col text-slate-600 shadow-md divide-y hover:shadow-black/30 transition-all duration-300">
       <p className="mr-auto pl-2 my-1 flex items-center gap-1 italic text-xs">
         <span>Posted :</span>
         <span className=""> {time}</span>
@@ -24,16 +24,12 @@ const BlogsCard = ({
         title={`Click to visit ${url}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="max-w-[350px] w-[95%] h-[60%] border rounded-md bg-white flex flex-col hover:scale-95 active:scale-95 transition-all duration-300"
+        className="max-w-[350px] w-[100%] h-[100%] rounded-md bg-white flex flex-col hover:scale-95 active:scale-95 transition-all duration-300"
       >
-        <div className="w-full h-[70%] rounded-t-md">
-          <img
-            src={newImg}
-            alt="Blog Image"
-            className="rounded-t-md h-full w-full"
-          />
+        <div className="w-full h-[100%]">
+          <img src={newImg} alt="Blog Image" className="h-full w-full" />
         </div>
-        <div className="w-full h-[40%] px-2 bg-slate-200 rounded-b-md flex flex-col justify-center">
+        <div className="w-full p-2 bg-slate-200 rounded-b-md flex flex-col justify-center">
           <p className="text-sm text-black">
             {title} - {by}
           </p>
@@ -41,7 +37,7 @@ const BlogsCard = ({
           <p className="text-[10px] text-slate-500 truncate">{mainSite}</p>
         </div>
       </a>
-      <div className="max-w-[350px] w-full px-3 h-[40%] flex flex-col justify-center mr-auto">
+      <div className="md:max-w-[350px] w-full px-2 py-3 flex flex-col justify-center">
         <p className="text-slate-900 text-sm">
           {title} - {by}
         </p>

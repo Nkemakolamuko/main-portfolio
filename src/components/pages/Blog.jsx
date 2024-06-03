@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import newImage from "../../assets/articles.jpg";
 import Header from "../Header";
 import Footer from "../Footer";
 import PageTitle from "../PageTitle";
@@ -83,15 +84,15 @@ const Blog = () => {
       {hamburger && <HeaderHamburger hideHamburger={handleHideHamburger} />}
       <ToastContainer position="top-left" />
       <PageTitle title="Articles" />
-      <div className="max-w-4xl mx-auto pb-28 flex flex-col items-center gap-10">
-        <div className="border hover:border-black hover:text-black hover:text-[14px] hover:bg-white border-t-0 h-[40px] w-[350px] text-center justify-center flex items-center text-white bg-blue-500 border-blue-500 transition-all duration-500 font-semibold truncate">
+      <div className="md:max-w-4xl w-full mx-auto pb-28 flex flex-col items-center md:gap-10 gap-5 px-2">
+        <div className="border hover:border-black hover:text-black hover:text-[14px] hover:bg-white border-t-0 h-[40px] md:w-[350px] w-full text-center justify-center flex items-center text-sm md:text-base text-white bg-blue-500 border-blue-500 transition-all duration-500 font-semibold truncate">
           PERSONAL AND HOSTED - IN PROGRESS
         </div>
 
         <div>
           {iframeLoaded ? (
-            <div className="w-[500px] h-[400px] flex items-center justify-center animate-pulse dark">
-              Getting Articles...
+            <div className="md:w-[500px] w-full h-[400px] flex items-center justify-center dark">
+              Loading Articles...
             </div>
           ) : (
             <InfiniteScroll
@@ -105,7 +106,7 @@ const Blog = () => {
                 </h3>
               }
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 mx-4 w-[95%] md:w-[100%]">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
                 {articles.map((article, i) => {
                   return (
                     <BlogsCard
