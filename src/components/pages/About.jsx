@@ -8,6 +8,7 @@ import HeaderHamburger from "./components/HeaderHamburger";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ThemeContext } from "../../App";
+import { FaAngleDown } from "react-icons/fa6";
 
 const About = () => {
   const { theme } = useContext(ThemeContext);
@@ -41,8 +42,8 @@ const About = () => {
             className="transition-all duration-300 md:rounded-b-r shadow-md hover:shadow-black/10 w-full"
           />
         </div>
-        <div className="font-light leading-[30px] border rounded mt-2 p-2">
-          <p className="py-4">
+        <div className="font-light leading-[30px] border rounded mt-2 md:mt-0 p-2">
+          <p className="py-2">
             Hello there!!{" "}
             <span className="font-bold text-[#F66B0E]">Nkem Vincent Nweke</span>{" "}
             here. I am a Frontend Developer who loves designing and developing
@@ -96,21 +97,25 @@ const About = () => {
         </div>
 
         {/* Interest */}
-        <div className="resume-section-content font-light leading-[30px] my-2 px-2 border rounded">
-          <button onClick={toggleInterests}>
-            <p className="transition-all duration-300 flex items-center gap-2 cursor-pointer border-l border-r hover:border-t-0 hover:border-b-0 px-2 py-1 my-4 rounded-md border-gray-600 justify-between outline-none font-light hover:bg-slate-300 hover:border-slate-300">
-              <h2 className="my-2 md:my-2 font-bold text-base md:text-xl transition-all duration-300">
+        <div className="resume-section-content font-light leading-[30px] border rounded my-2 divide-y">
+          <button onClick={toggleInterests} className="w-full">
+            <div className="transition-all duration-300 flex items-center w-full gap-2 cursor-pointer px-2 py-1 justify-between outline-none font-light">
+              <h2 className="my-2 md:my-2 font-medium text-base md:text-xl transition-all duration-300">
                 {isInterestVisible ? "Hide Interests" : "Show Interests"}
               </h2>
-              <BiSolidDownArrow
+              <FaAngleDown
                 className={`transition-all duration-300 text-base md:text-xl ${
                   isInterestVisible ? "rotate-180" : ""
                 }`}
               />
-            </p>
+            </div>
           </button>
           {isInterestVisible && (
-            <div ref={interestsRef} id="interests">
+            <div
+              ref={interestsRef}
+              id="interests"
+              className="px-2 py-4 text-sm"
+            >
               <p className="mb-4">
                 As a Frontend Developer, I am passionate about honing my skills
                 and staying up-to-date with the latest technologies and trends
