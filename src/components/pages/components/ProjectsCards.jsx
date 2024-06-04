@@ -8,7 +8,7 @@ const ProjectsCards = ({ title, image, alt, link, githublink }) => {
   return (
     <div
       className={`shadow-lg ${
-        theme === "light" ? "border-black" : "border-white shadow-white"
+        theme === "light" ? "border-black" : "border-white shadow-white/20"
       } border h-fit md:h-[100%] transition-all duration-300`}
     >
       <a href={link} target="_blank" rel="noopener noreferrer">
