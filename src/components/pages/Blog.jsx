@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import newImage from "../../assets/articles.jpg";
+import newImg from "../../assets/articles.jpg";
 import Header from "../Header";
 import Footer from "../Footer";
 import PageTitle from "../PageTitle";
@@ -9,6 +9,7 @@ import BlogsCard from "./components/BlogsCard";
 import { useContext } from "react";
 import { ThemeContext } from "../../App";
 import InfiniteScroll from "react-infinite-scroll-component";
+import BlogsCardLoader from "./components/BlogsCardLoader";
 
 const Blog = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -89,40 +90,43 @@ const Blog = () => {
           PERSONAL AND HOSTED - IN PROGRESS
         </div>
 
-        <div>
-          {iframeLoaded ? (
-            <div className="md:w-[500px] w-full h-[400px] flex items-center justify-center dark">
-              Loading Articles...
+        {iframeLoaded ? (
+          // <div className="md:w-[500px] w-full h-[400px] flex items-center justify-center dark">
+          //   Loading Articles...
+          // </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 w-full md:w-[700px]">
+            <BlogsCardLoader />
+            <BlogsCardLoader />
+          </div>
+        ) : (
+          <InfiniteScroll
+            dataLength={articles.length}
+            next={fetchMoreData}
+            hasMore={true}
+            style={{ overflow: "hidden", width: "100%" }}
+            loader={
+              // <h3 style={{ textAlign: "center", marginTop: "20px" }}>
+              //   Loading...
+              // </h3>
+              <BlogsCardLoader />
+            }
+          >
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 w-full md:w-[700px]">
+              {articles.map((article, i) => {
+                return (
+                  <BlogsCard
+                    url={article.url}
+                    mainSite={article.url}
+                    key={i}
+                    time={article.time}
+                    title={article.title}
+                    by={article.by}
+                  />
+                );
+              })}
             </div>
-          ) : (
-            <InfiniteScroll
-              dataLength={articles.length}
-              next={fetchMoreData}
-              hasMore={true}
-              style={{ overflow: "hidden", width: "100%" }}
-              loader={
-                <h3 style={{ textAlign: "center", marginTop: "20px" }}>
-                  Loading...
-                </h3>
-              }
-            >
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
-                {articles.map((article, i) => {
-                  return (
-                    <BlogsCard
-                      url={article.url}
-                      mainSite={article.url}
-                      key={i}
-                      time={article.time}
-                      title={article.title}
-                      by={article.by}
-                    />
-                  );
-                })}
-              </div>
-            </InfiniteScroll>
-          )}
-        </div>
+          </InfiniteScroll>
+        )}
       </div>
       <Footer />
     </div>

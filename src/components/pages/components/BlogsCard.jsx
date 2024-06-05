@@ -14,7 +14,7 @@ const BlogsCard = ({
   // img,
 }) => {
   return (
-    <div className="max-w-[350px] w-full h-[100%] border flex items-center justify-center bg-slate-100 flex-col text-slate-600 shadow-md divide-y hover:shadow-black/30 transition-all duration-300 dark">
+    <div className="md:max-w-[350px] w-full h-[100%] border flex items-center justify-center bg-slate-100 flex-col text-slate-600 shadow-md divide-y hover:shadow-black/30 transition-all duration-300 dark">
       <p className="mr-auto pl-2 my-1 flex items-center gap-1 italic text-xs">
         <span>Posted :</span>
         <span className=""> {time}</span>
@@ -24,12 +24,12 @@ const BlogsCard = ({
         title={`Click to visit ${url}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="max-w-[350px] w-[100%] h-[100%] rounded-md bg-white flex flex-col dark hover:scale-95 active:scale-95 transition-all duration-300"
+        className="md:max-w-[350px] w-[100%] h-[100%] rounded-md bg-white flex flex-col dark hover:scale-95 active:scale-95 transition-all duration-300"
       >
         <div className="w-full h-[100%]">
           <img src={newImg} alt="Blog Image" className="h-full w-full" />
         </div>
-        <div className="w-full p-2 bg-slate-200 rounded-b-md flex flex-col justify-center">
+        <div className="w-full p-2 bg-slate-200 flex flex-col justify-center">
           <p className="text-sm text-black">
             {title} - {by}
           </p>
@@ -38,7 +38,7 @@ const BlogsCard = ({
         </div>
       </a>
       <div className="md:max-w-[350px] w-full px-2 py-3 flex flex-col justify-center">
-        <p className="text-slate-900 text-sm">
+        <p className="text-sm">
           {title} - {by}
         </p>
         <a
