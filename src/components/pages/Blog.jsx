@@ -105,10 +105,10 @@ const Blog = () => {
             hasMore={true}
             style={{ overflow: "hidden", width: "100%" }}
             loader={
-              // <h3 style={{ textAlign: "center", marginTop: "20px" }}>
-              //   Loading...
-              // </h3>
-              <BlogsCardLoader />
+              <div className="mt-4 flex flex-col gap-2">
+                <h3 className="text-center">Loading...</h3>
+                <BlogsCardLoader />
+              </div>
             }
           >
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 w-full md:w-[700px]">
