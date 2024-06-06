@@ -12,8 +12,12 @@ const ProjectsCards = ({ title, image, alt, link, githublink }) => {
       } border h-fit md:h-[100%] transition-all duration-300`}
     >
       <a href={link} target="_blank" rel="noopener noreferrer">
-        <div className="container mx-auto w-[100%] h-[100%] md:h-[100%] flex flex-col justify-between">
-          <div className="hover:border hover:border-t-0 hover:border-black/30 transition-all duration-300">
+        <div
+          className={`container mx-auto w-[100%] h-[100%] md:h-[100%] flex flex-col justify-between divide-y ${
+            theme === "light" ? "divide-black" : "divide-slate-200"
+          }`}
+        >
+          <div className="h-[100%] transition-all duration-300">
             <img
               src={image}
               className="h-[100%] hover:scale-95 transition-all duration-300 w-[100%]"
@@ -21,10 +25,10 @@ const ProjectsCards = ({ title, image, alt, link, githublink }) => {
             />
           </div>
 
-          <div className="flex justify-between items-center w-full p-2 border rounded">
+          <div className="flex justify-between items-center w-full p-2">
             <p className="font-semibold hover:underline hover:underline-offset-1 flex items-center transition-all duration-300 w-[85%]">
               <span>
-                <IoIosLink className="mr-2 opacity-100 rotate-45" />
+                <IoIosLink className="mr-2 opacity-100 rotate-45 w-5 h-5" />
               </span>
               <span className="truncate">{title}</span>
             </p>
