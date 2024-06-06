@@ -33,7 +33,9 @@ const Header = ({
   return (
     <nav
       className={`flex justify-between items-center ${
-        theme === "light" ? "shadow-lg" : "shadow shadow-white/80"
+        theme === "light"
+          ? "shadow-lg"
+          : "shadow-md shadow-white/80 hover:shadow-white/80 hover:shadow-lg transition-all duration-300"
       }  font-semibold top-0 sticky z-50 header`}
       data-theme={theme}
     >
