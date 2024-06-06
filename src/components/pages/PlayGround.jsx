@@ -32,7 +32,7 @@ const PlayGround = () => {
 
   const handleUndo = () => {
     const savedPosition = [...positions];
-    // How I made this work ? Well I realised that the popped item is returned, and the savedPosition is updated with position being same. So I didn't have to update position with - setPosition([savedPosition]), instead I had to ...spread through it
+    // How I made this work ? Well I realized that the popped item is returned, and the savedPosition is updated with position being same. So I didn't have to update position with - setPosition([savedPosition]), instead I had to ...spread through it
     if (savedPosition.length === 0) {
       toast.error("Nothing to Undo");
       return;
@@ -53,11 +53,14 @@ const PlayGround = () => {
   };
 
   const handleClearAll = () => {
-    const confirmation = confirm("Are you sure?");
-    if (confirmation) {
-      setPositions([]);
+    if (positions.length !== 0) {
+      const confirmation = confirm("Are you sure?");
+      if (confirmation) {
+        setPositions([]);
+      }
+    } else {
+      toast.error("Board is clear.");
     }
-    return;
   };
 
   return (
