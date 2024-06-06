@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ThemeContext } from "../../../App";
 import { FaTimes } from "react-icons/fa";
+import { FaLaptopCode } from "react-icons/fa6";
 
 const HeaderHamburger = ({ hideHamburger }) => {
   const { theme } = useContext(ThemeContext);
@@ -27,7 +28,7 @@ const HeaderHamburger = ({ hideHamburger }) => {
         <FaTimes />
       </p>
       <div
-        className="z-[99] flex py-2 h-[100vh] top-0 fixed flex-col dark w-[80%] shadow-lg border-r px-4 divide-y-2"
+        className="z-[99] flex py-2 h-[100vh] top-0 fixed flex-col dark w-[80%] shadow-lg border-r px-4 divide-y overflow-auto"
         data-theme={theme}
       >
         <p className="py-2">Nkem Vincent Nweke</p>
@@ -50,6 +51,13 @@ const HeaderHamburger = ({ hideHamburger }) => {
             </Link>
           ))}
         </ul>
+        <p className="w-[100%]">
+          <FaLaptopCode
+            className={`w-60 h-60 opacity-30 ${
+              theme === "dark" ? "text-slate-300" : "text-black/30"
+            }`}
+          />
+        </p>
       </div>
     </div>
   );

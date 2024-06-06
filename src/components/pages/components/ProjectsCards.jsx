@@ -1,10 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaLinkedin, FaGithub, FaLink } from "react-icons/fa";
 import { IoIosLink } from "react-icons/io";
 import { ThemeContext } from "../../../App";
 
 const ProjectsCards = ({ title, image, alt, link, githublink }) => {
   const { theme } = useContext(ThemeContext);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    const timeoutId = setTimeout(() => {
+      setLoading(false);
+      clearTimeout(timeoutId);
+    }, 2000);
+  }, []);
   return (
     <div
       className={`shadow-lg ${
@@ -18,11 +27,17 @@ const ProjectsCards = ({ title, image, alt, link, githublink }) => {
           }`}
         >
           <div className="h-[100%] transition-all duration-300">
-            <img
-              src={image}
-              className="h-[100%] hover:scale-95 transition-all duration-300 w-[100%]"
-              alt={alt}
-            />
+            {loading ? (
+              <p className="h-[190px] md:h-[250px] w-[100%] flex justify-center text-center items-center text-sm">
+                Loading image...
+              </p>
+            ) : (
+              <img
+                src={image}
+                className="h-[100%] hover:scale-95 transition-all duration-300 w-[100%]"
+                alt={alt}
+              />
+            )}
           </div>
 
           <div className="flex justify-between items-center w-full p-2">

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useContext } from "react";
+import React, { useState, useRef, useContext, useEffect } from "react";
 import Header from "../Header";
 import PageTitle from "../PageTitle";
 import PFP from "./PFP.jpg";
@@ -12,6 +12,7 @@ import { FaAngleDown } from "react-icons/fa6";
 
 const About = () => {
   const { theme } = useContext(ThemeContext);
+  const [loading, setLoading] = useState(false);
   const [isInterestVisible, setIsInterestVisible] = useState(false);
   const [isHamburgerVisible, setIsHamburgerVisible] = useState(false);
   const interestsRef = useRef(null);
@@ -24,6 +25,14 @@ const About = () => {
     }
   };
 
+  useEffect(() => {
+    setLoading(true);
+    const timeoutId = setTimeout(() => {
+      setLoading(false);
+      clearTimeout(timeoutId);
+    }, 2000);
+  }, []);
+
   return (
     <div className="dark" data-theme={theme}>
       <Header openHamburger={toggleHamburger} activeAbout={true} />
@@ -34,13 +43,19 @@ const About = () => {
       <PageTitle title="About" />
       <div className="max-w-3xl mx-auto pb-28 px-4 md:px-0 lg:px-0">
         <div className="float-start md:float-left lg:float-left mr-[20px] md:w-[350px] w-full md:mb-0 mb-4">
-          <img
-            src={PFP}
-            // width={400}
-            // height={400}
-            alt="My Picture"
-            className="transition-all duration-300 md:rounded-b-r shadow-md hover:shadow-black/10 w-full"
-          />
+          {loading ? (
+            <p className="h-[185px] w-[100%] flex justify-center text-center items-center text-sm border-b md:border-none">
+              Loading image...
+            </p>
+          ) : (
+            <img
+              src={PFP}
+              // width={400}
+              // height={400}
+              alt="My Picture"
+              className="transition-all duration-300 md:rounded-b-r shadow-md hover:shadow-black/10 w-full"
+            />
+          )}
         </div>
         <div className="font-light leading-[30px] border rounded mt-2 md:mt-0 p-2">
           <p className="py-2">
