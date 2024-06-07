@@ -53,9 +53,11 @@ const Resume = () => {
           </a>
         </div>
       ) : (
-        <div className="w-[full] h-[65vh] flex items-center justify-center">
-          Currently being updated... <br />
-          Available on request.
+        <div className="w-[full] h-[100vh] overflow-hidden">
+          <div className="flex items-center justify-center h-[65vh]">
+            Currently being updated... <br />
+            Available on request.
+          </div>
           {/* I'd bring back loading text and uncomment the commented out code on useEffect as well to take the code back to what it was */}
         </div>
       )}
