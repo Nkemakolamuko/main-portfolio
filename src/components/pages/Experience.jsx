@@ -50,7 +50,7 @@ const Experience = () => {
         />
         <ExperienceCards
           startYear="2023"
-          endYear=""
+          endYear="2024"
           role="Web Developer"
           company="Jamal Forex Hub"
           description="The Hub of millionaires. I designed and developed the Landing page for this amazing Forex Academy. With the aim of helping them reach more customers and grow their audience."

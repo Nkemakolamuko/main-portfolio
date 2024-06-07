@@ -26,6 +26,12 @@ const AllProjects = () => {
   const [hamburger, setHamburger] = useState(false);
   const [project, setProject] = useState(false);
 
+  const links = [
+    { to: "/projects/react-projects", text: "ReactJS Projects" },
+    { to: "/projects/javascript-projects", text: "Vanilla JS Projects" },
+    { to: "/projects/python-projects", text: "Python Projects" },
+  ];
+
   const handleOpenHamburger = () => {
     setHamburger(true);
   };
@@ -64,22 +70,14 @@ const AllProjects = () => {
         </p>
 
         {project && (
-          <div className="flex flex-col bg-white text-black p-2 w-[200px] z-10 shadow-xl gap-1 transition-all duration-300 rounded-b-[4px]">
-            <Link to="/projects/react-projects">
-              <p className="bg-slate-100 py-2 px-1 rounded-[4px] hover:bg-slate-200">
-                ReactJS Projects
-              </p>
-            </Link>
-            <Link to="/projects/javascript-projects">
-              <p className="bg-slate-100 py-2 px-1 rounded-[4px] hover:bg-slate-200">
-                Vanilla JS Projects
-              </p>
-            </Link>
-            <Link to="/projects/python-projects">
-              <p className="bg-slate-100 py-2 px-1 rounded-[4px] hover:bg-slate-200">
-                Python Projects
-              </p>
-            </Link>
+          <div className="flex flex-col bg-white text-black p-2 w-[200px] border z-10 shadow-xl gap-1 transition-all duration-300 rounded-b-[4px]">
+            {links.map((value) => (
+              <Link to={value.to} key={value.text}>
+                <p className="bg-slate-100 py-2 px-1 rounded-[4px] hover:bg-slate-200">
+                  {value.text}
+                </p>
+              </Link>
+            ))}
           </div>
         )}
       </div>

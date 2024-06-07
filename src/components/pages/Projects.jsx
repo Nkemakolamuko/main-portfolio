@@ -23,6 +23,13 @@ const Projects = () => {
   const [hamburger, setHamburger] = useState(false);
   const [project, setProject] = useState(false);
 
+  const links = [
+    { to: "/projects/all-projects", text: "All Projects" },
+    { to: "/projects/react-projects", text: "ReactJS Projects" },
+    { to: "/projects/javascript-projects", text: "Vanilla JS Projects" },
+    { to: "/projects/python-projects", text: "Python Projects" },
+  ];
+
   const handleOpenHamburger = () => {
     setHamburger(true);
   };
@@ -43,7 +50,7 @@ const Projects = () => {
       <PageTitle title="Projects" />
       <div
         className={`w-[200px] h-[40px] flex flex-col bg-white p-2 text-black items-center mx-auto ${
-          theme === "dark" ? "border" : "shadow-lg"
+          theme === "dark" ? "border" : "shadow-lg border"
         }`}
       >
         <p
@@ -61,27 +68,14 @@ const Projects = () => {
         </p>
 
         {project && (
-          <div className="flex flex-col bg-white text-black p-2 w-[200px] z-10 shadow-xl gap-1 transition-all duration-300 rounded-b-[4px]">
-            <Link to="/projects/all-projects">
-              <p className="bg-slate-100 py-2 px-1 rounded-[4px] hover:bg-slate-200">
-                All Projects
-              </p>
-            </Link>
-            <Link to="/projects/react-projects">
-              <p className="bg-slate-100 py-2 px-1 rounded-[4px] hover:bg-slate-200">
-                ReactJS Projects
-              </p>
-            </Link>
-            <Link to="/projects/javascript-projects">
-              <p className="bg-slate-100 py-2 px-1 rounded-[4px] hover:bg-slate-200">
-                Vanilla JS Projects
-              </p>
-            </Link>
-            <Link to="/projects/python-projects">
-              <p className="bg-slate-100 py-2 px-1 rounded-[4px] hover:bg-slate-200">
-                Python Projects
-              </p>
-            </Link>
+          <div className="flex flex-col bg-white text-black p-2 w-[200px] border z-10 shadow-xl gap-1 transition-all duration-300 rounded-b-[4px]">
+            {links.map((value) => (
+              <Link to={value.to} key={value.text}>
+                <p className="bg-slate-100 py-2 px-1 rounded-[4px] hover:bg-slate-200">
+                  {value.text}
+                </p>
+              </Link>
+            ))}
           </div>
         )}
       </div>
