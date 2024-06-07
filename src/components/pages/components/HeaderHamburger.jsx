@@ -54,7 +54,7 @@ const HeaderHamburger = ({ hideHamburger }) => {
         <p className="w-[100%]">
           <FaLaptopCode
             className={`w-60 h-60 opacity-30 ${
-              theme === "dark" ? "text-slate-300" : "text-black/30"
+              theme === "dark" ? "text-slate-300" : "text-blue-300"
             }`}
           />
         </p>
