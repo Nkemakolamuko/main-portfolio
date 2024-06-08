@@ -16,6 +16,7 @@ const Header = ({
   // toggleTheme,
   activeBlogs,
   activeAbout,
+  activeEducation,
   activeCV,
   activePro,
   activeX,
@@ -53,6 +54,15 @@ const Header = ({
               }`}
             >
               ABOUT
+            </li>
+          </Link>
+          <Link to="/education" className=" transition-all duration-200">
+            <li
+              className={`px-2 py-4 active:scale-90 ${
+                activeEducation ? "border-b-4 border-b-[#F66B0E]" : ""
+              }`}
+            >
+              EDUCATION
             </li>
           </Link>
           <Link to="/projects" className=" transition-all duration-200">

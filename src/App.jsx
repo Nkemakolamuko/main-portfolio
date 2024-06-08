@@ -12,6 +12,7 @@ import ReactProjects from "./components/pages/components/projectPages/ReactProje
 import JavaScriptProjects from "./components/pages/components/projectPages/JavaScriptProjects";
 import AllProjects from "./components/pages/components/projectPages/AllProjects";
 import PlayGround from "./components/pages/PlayGround";
+import Education from "./components/pages/Education";
 
 export const ThemeContext = createContext(null);
 
@@ -34,6 +35,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/education" element={<Education />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/all-projects" element={<AllProjects />} />
           <Route

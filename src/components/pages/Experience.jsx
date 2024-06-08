@@ -28,7 +28,7 @@ const Experience = () => {
       {hamburger && <HeaderHamburger hideHamburger={handleHideHamburger} />}
       <ToastContainer position="top-left" />
       <PageTitle title="Experience" />
-      <div className="max-w-3xl px-4 md:px-0 lg:px-0 mx-auto pb-28 font-semibold ">
+      <div className="max-w-3xl px-4 md:px-0 lg:px-0 mx-auto pb-28">
         <ExperienceCards
           startYear="2023"
           endYear=""

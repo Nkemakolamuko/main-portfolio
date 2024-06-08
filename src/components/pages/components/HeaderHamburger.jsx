@@ -11,6 +11,7 @@ const HeaderHamburger = ({ hideHamburger }) => {
   const links = [
     { to: "/", text: "HOME" },
     { to: "/about", text: "ABOUT" },
+    { to: "/education", text: "EDUCATION" },
     { to: "/projects", text: "PROJECTS" },
     { to: "/experience", text: "EXPERIENCE" },
     { to: "/resume", text: "RÉSUMÉ/CV" },
