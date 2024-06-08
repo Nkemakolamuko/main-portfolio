@@ -33,7 +33,7 @@ const Education = () => {
           />
           <EducationCards
             startYear={"2024"}
-            endYear={""}
+            endYear={"Current"}
             school={"African Leadership University (ALU), Kigali"}
             type={"College / University"}
             cert={"BSc Software Engineering"}
