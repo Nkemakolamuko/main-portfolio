@@ -111,7 +111,7 @@ const ReactProjects = () => {
             title="MedEaseApp - Full Stack App"
             image={MEDEASE}
             alt="MedEaseApp"
-            link="https://medeaseapp-six.vercel.app/"
+            link="https://medeaseapp-six.vercel.app/signup"
             githublink="/"
           />
 
