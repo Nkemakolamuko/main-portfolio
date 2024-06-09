@@ -9,7 +9,7 @@ const ExperienceCards = ({
 }) => {
   return (
     <>
-      <div className="grid grid-cols-3 justify-between gap-4 mb-4 mt-4 border divide-x-2 hover:shadow-md transition-all duration-300">
+      <div className="grid grid-cols-3 justify-between gap-4 mb-4 mt-4 border border-dashed divide-x divide-dashed hover:shadow-md transition-all duration-300">
         <div className="col-span-1 p-4">
           <div className="flex items-center gap-0">
             <div className="w-[100%] md:w-[100%] lg:w-[100%] text-sm">
