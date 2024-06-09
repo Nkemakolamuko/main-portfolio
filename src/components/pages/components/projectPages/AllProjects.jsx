@@ -5,6 +5,7 @@ import Footer from "../../../Footer";
 import ProjectsCards from "../../components/ProjectsCards";
 import MEDEASE from "../../Med-Ease.png";
 import eazy from "../../../../assets/eazyNew.png";
+import ocr from "../../../../assets/img-converter.png";
 import cleaning from "../../../../assets/Cleaning-Service.png";
 import SportsNews from "../../Sports-News.png";
 import VideoDownloader from "../../Video-Downloader.png";
@@ -98,6 +99,13 @@ const AllProjects = () => {
             alt="Cleaning"
             link="https://247-cleaning.vercel.app/"
             githublink="https://github.com/Nkemakolamuko/e-cleaning-frontend"
+          />
+          <ProjectsCards
+            title="Tesseract Image To Text - OCR"
+            image={ocr}
+            alt="OCR"
+            link="https://nvn-ocr.vercel.app/"
+            githublink="https://github.com/Nkemakolamuko/tesseract-ocr"
           />
           <ProjectsCards
             title="Eazy Shoppa - Full Stack App"

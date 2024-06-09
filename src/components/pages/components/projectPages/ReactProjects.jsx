@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import todo from "../../../../assets/todo.png";
 import eazy from "../../../../assets/eazyNew.png";
+import ocr from "../../../../assets/img-converter.png";
 import port from "../../../../assets/port.png";
 import cleaning from "../../../../assets/Cleaning-Service.png";
 import MEDEASE from "../../Med-Ease.png";
@@ -96,6 +97,14 @@ const ReactProjects = () => {
             alt="Cleaning"
             link="https://247-cleaning.vercel.app/"
             githublink="https://github.com/Nkemakolamuko/e-cleaning-frontend"
+          />
+
+          <ProjectsCards
+            title="Tesseract Image To Text - OCR"
+            image={ocr}
+            alt="OCR"
+            link="https://nvn-ocr.vercel.app/"
+            githublink="https://github.com/Nkemakolamuko/tesseract-ocr"
           />
 
           <ProjectsCards
