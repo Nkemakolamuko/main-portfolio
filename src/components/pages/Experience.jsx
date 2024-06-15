@@ -50,6 +50,14 @@ const Experience = () => {
         />
         <ExperienceCards
           startYear="2023"
+          endYear=""
+          role="SS/SE Representative"
+          company="Community Development Services at TIIDELab"
+          description="Through our project #WE_CARE, we provided support for basic amenities to elderly people, schools, and orphanages across the three major regions in Nigeria. Our efforts improved the living conditions and educational resources for numerous communities."
+        />
+
+        <ExperienceCards
+          startYear="2023"
           endYear="2024"
           role="Web Developer"
           company="Jamal Forex Hub"
