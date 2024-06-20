@@ -126,11 +126,7 @@ const About = () => {
             </div>
           </button>
           {isInterestVisible && (
-            <div
-              ref={interestsRef}
-              id="interests"
-              className="px-2 py-4 text-sm"
-            >
+            <div ref={interestsRef} id="interests" className="px-2 py-4">
               <p className="mb-4">
                 As a Frontend Developer, I am passionate about honing my skills
                 and staying up-to-date with the latest technologies and trends

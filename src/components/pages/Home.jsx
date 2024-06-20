@@ -7,10 +7,25 @@ import "react-toastify/dist/ReactToastify.css";
 import { ThemeContext } from "../../App";
 import { useContext } from "react";
 import Typewriter from "./HomeAnimate";
+import { Link } from "react-router-dom";
+import { FaAngleRight, FaTimes } from "react-icons/fa";
 
 const Home = () => {
   const { theme, setTheme } = useContext(ThemeContext);
   const [hamburger, setHamburger] = useState(false);
+  const [show, setShow] = useState(false);
+
+  const links = [
+    { to: "/", text: "HOME" },
+    { to: "/about", text: "ABOUT" },
+    { to: "/education", text: "EDUCATION" },
+    { to: "/projects", text: "PROJECTS" },
+    { to: "/experience", text: "EXPERIENCE" },
+    { to: "/resume", text: "RÉSUMÉ/CV" },
+    { to: "/articles", text: "ARTICLES" },
+    { to: "/skill", text: "SKILLS" },
+    { to: "/playground", text: "PLAYGROUND" },
+  ];
 
   const handleOpenHamburger = () => {
     setHamburger(true);
@@ -21,28 +36,28 @@ const Home = () => {
   };
 
   return (
-    <div className="home h-screen" data-theme={theme}>
+    <div className="home h-screen relative" data-theme={theme}>
       <Header openHamburger={handleOpenHamburger} />
       {hamburger && <HeaderHamburger hideHamburger={handleHideHamburger} />}
       <ToastContainer position="top-left" />
       <div
-        className="flex flex-col items-center home gap-8 md:gap-0 h-[100vh] md:h-[91vh]"
+        className="flex flex-col items-center home gap-5 md:gap-0 h-[100vh] md:h-[91vh]"
         // data-theme="dark"
         data-theme={theme}
       >
         <div className="z-0 text-center mt-[100px] md:mt-[70px]">
-          <span className="text-[30px] md:text-[50px] lg:text-[80px] font-[700] uppercase name transition-all duration-300">
+          <span className="text-[30px] md:text-[50px] lg:text-[50px] font-[700] uppercase name transition-all duration-300">
             {/* The space before the name makes it return what I want it to - because it skips the second letter at index 1 - I wonder why */}
             <Typewriter text="  Nkem Vincent Nweke" speed={100} />
           </span>{" "}
           <br />
-          <span className="text-[24px] lg:text-[60px] font-[600] name transition-all duration-300">
+          <span className="text-[24px] lg:text-[40px] font-[600] name transition-all duration-300">
             <Typewriter text="  Frontend React Developer" speed={200} />
           </span>
         </div>
 
         <svg
-          className="z-10 h-[350px] w-[350px] md:h-[350px] md:w-[350px]"
+          className="z-10 h-[300px] w-[300px]"
           xmlns="http://www.w3.org/2000/svg"
           // width="350"
           // height="350"
@@ -133,6 +148,46 @@ const Home = () => {
             fill={theme === "light" ? "#2f2e43" : "#ccc"}
           />
         </svg>
+
+        {/* Quick Links */}
+        <div>
+          <p>Let me help you bring your idea to live!!!</p>
+        </div>
+
+        <div className="flex items-center gap-5 justify-center border p-4 rounded w-fit overflow-hidden mb-2">
+          <p>Quick Links</p>
+          <div
+            className={`p-2 rounded-md ${
+              !show ? "bg-blue-600" : "bg-rose-500"
+            } text-white flex items-center gap-1 cursor-pointer transition-all duration-300`}
+            onClick={() => setShow(!show)}
+          >
+            {!show ? (
+              <>
+                <span>See All</span>
+                <FaAngleRight />
+              </>
+            ) : (
+              <>
+                {" "}
+                <span>Cancel</span> <FaTimes />{" "}
+              </>
+            )}
+          </div>
+        </div>
+        {show ? (
+          <ul className="absolute top-[50%] p-4 border shadow-lg bg-white text-black rounded-md grid grid-cols-3 gap-2 w-[340px] text-xs z-10">
+            {links.map((link, i) => {
+              return (
+                <Link to={link.to} key={i}>
+                  <li className="p-2 bg-blue-500 text-white rounded-lg text-center">
+                    {link.text}
+                  </li>
+                </Link>
+              );
+            })}
+          </ul>
+        ) : null}
       </div>
     </div>
   );
