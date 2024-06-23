@@ -154,7 +154,7 @@ const Home = () => {
           <p>Let me help you bring your idea to live!!!</p>
         </div>
 
-        <div className="flex items-center gap-5 justify-center border p-4 rounded w-fit overflow-hidden mb-2">
+        <div className="flex items-center gap-5 justify-center border p-4 rounded w-fit overflow-hidden mb-2 md:hidden">
           <p>Quick Links</p>
           <div
             className={`p-2 rounded-md ${
