@@ -13,6 +13,7 @@ import JavaScriptProjects from "./components/pages/components/projectPages/JavaS
 import AllProjects from "./components/pages/components/projectPages/AllProjects";
 import PlayGround from "./components/pages/PlayGround";
 import Education from "./components/pages/Education";
+import Achievements from "./components/pages/Achievements";
 
 export const ThemeContext = createContext(null);
 
@@ -51,6 +52,7 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="/articles" element={<Blog />} />
           <Route path="/skill" element={<Skills />} />
+          <Route path="/achievement" element={<Achievements />} />
           <Route path="/playground" element={<PlayGround />} />
         </Routes>
       </BrowserRouter>

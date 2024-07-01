@@ -18,6 +18,7 @@ const Header = ({
   activeAbout,
   activeEducation,
   activeCV,
+  activeAchievement,
   activePro,
   activeX,
   activeSkills,
@@ -106,6 +107,15 @@ const Header = ({
               } uppercase`}
             >
               SKILLS
+            </li>
+          </Link>
+          <Link to="/achievement" className=" transition-all duration-200">
+            <li
+              className={`px-2 py-4 active:scale-90 ${
+                activeAchievement ? "border-b-4 border-b-[#F66B0E]" : ""
+              } uppercase`}
+            >
+              ACHIEVEMENT
             </li>
           </Link>
           <Link to="/playground" className=" transition-all duration-200">

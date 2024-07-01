@@ -17,6 +17,7 @@ const HeaderHamburger = ({ hideHamburger }) => {
     { to: "/resume", text: "RÉSUMÉ/CV" },
     { to: "/articles", text: "ARTICLES" },
     { to: "/skill", text: "SKILLS" },
+    { to: "/achievement", text: "ACHIEVEMENTS" },
     { to: "/playground", text: "PLAYGROUND" },
   ];
 
