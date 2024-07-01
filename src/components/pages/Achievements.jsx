@@ -3,6 +3,8 @@ import Header from "../Header";
 import HeaderHamburger from "./components/HeaderHamburger";
 import PageTitle from "../PageTitle";
 import img from "../../assets/nvn.jpg";
+import img2 from "../../assets/img2.jpeg";
+import img3 from "../../assets/img3.jpeg";
 import { ThemeContext } from "../../App";
 import AchievementCard from "./components/AchievementCard";
 import AchievementDetails from "./components/AchievementDetails";
@@ -12,14 +14,14 @@ const achievementsData = [
     id: 1,
     title: "Certified Frontend Developer",
     details: "Certified as a Frontend Developer upon graduation from TIIDELab.",
-    img: img,
+    img: img3,
   },
   {
     id: 2,
     title: "Most Outstanding Team Member",
     details:
       "Awarded for the mot outstanding performance in my team for Frontend Development at TIIDELab.",
-    img: img,
+    img: img2,
   },
   {
     id: 3,
@@ -61,6 +63,7 @@ const Achievements = () => {
           <AchievementCard
             key={achievement.id}
             alt={achievement.title}
+            img={achievement.img}
             achievement={achievement}
             onShowDetails={handleShowDetails}
           />
