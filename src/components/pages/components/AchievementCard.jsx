@@ -15,11 +15,18 @@ const AchievementCard = ({ alt, achievement, onShowDetails, img }) => {
       <div
         className={`absolute top-2 right-2 m-2 shadow-lg rounded-full group-hover:block block md:hidden transition-all duration-300`}
       >
-        <FaInfoCircle
+        {/* <FaInfoCircle
           size={24}
           className="cursor-pointer text-[#F66B0E] active:scale-95"
           onClick={() => onShowDetails(achievement)}
-        />
+        /> */}
+        <span
+          className="cursor-pointer active:scale-95 bg-black text-white p-3 rounded-full text-xs flex items-center gap-1"
+          onClick={() => onShowDetails(achievement)}
+        >
+          <FaInfoCircle className="text-[#F66B0E]" />
+          Info
+        </span>
       </div>
     </div>
   );

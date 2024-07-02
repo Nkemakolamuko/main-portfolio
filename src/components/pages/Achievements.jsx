@@ -8,6 +8,7 @@ import img3 from "../../assets/img3.jpeg";
 import { ThemeContext } from "../../App";
 import AchievementCard from "./components/AchievementCard";
 import AchievementDetails from "./components/AchievementDetails";
+import Footer from "../Footer";
 
 const achievementsData = [
   {
@@ -56,7 +57,7 @@ const Achievements = () => {
     <div className="dark" data-theme={theme}>
       <Header openHamburger={handleOpenHamburger} activeAchievement={true} />
       {hamburger && <HeaderHamburger hideHamburger={handleHideHamburger} />}
-      <PageTitle title="Achievements" />
+      <PageTitle title="Achievement" />
 
       <div className="grid md:grid-cols-3 grid-cols-1 w-full md:w-[80%] mx-auto pb-24 gap-4 p-2">
         {achievementsData.map((achievement) => (
@@ -76,6 +77,8 @@ const Achievements = () => {
           onClose={handleCloseDetails}
         />
       )}
+
+      <Footer />
     </div>
   );
 };
