@@ -21,6 +21,7 @@ import { Link } from "react-router-dom";
 import { MdArrowDropDown, MdArrowDropUp } from "react-icons/md";
 import { ThemeContext } from "../../../../App";
 import JFHNEW from "../../../../assets/JFHNEW.png";
+import MABEL from "../../../../assets/mabel.png";
 
 const AllProjects = () => {
   const { theme } = useContext(ThemeContext);
@@ -87,11 +88,18 @@ const AllProjects = () => {
           {/* Turn to component */}
 
           <ProjectsCards
+            title="LUC - Fashion House"
+            image={MABEL}
+            alt="JFH"
+            link="https://luc-xi.vercel.app/"
+            githublink="https://github.com/Nkemakolamuko/loveableanduniqueclothing"
+          />
+          <ProjectsCards
             title="Jamal Forex Hub 2.0"
             image={JFHNEW}
             alt="JFH"
             link="https://jfhub.vercel.app/"
-            githublink="https://github.com/Nkemakolamuko/"
+            githublink="https://github.com/Nkemakolamuko/jamal-forex-hub-latest"
           />
           <ProjectsCards
             title="Online Cleaning Service - Full Stack App"

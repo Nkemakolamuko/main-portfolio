@@ -69,6 +69,12 @@ const Experience = () => {
           company="Cepay"
           description="With a team of 4, we've been able to successfully generate traffic for the newly launched product - Cepay, that aims to simplify fintech and money conversion."
         />
+        <ExperienceCards
+          startYear="2024"
+          role="Team Mentor"
+          company="TIIDELab Pre-Fellowship"
+          description="During a six-week intensive training at TIIDELab pre-fellowship, I was priviledged to act as a mentor to an amazing team who built an email generator using Python and AI. It was amazing seeing these guys make progress."
+        />
       </div>
       <Footer />
     </div>

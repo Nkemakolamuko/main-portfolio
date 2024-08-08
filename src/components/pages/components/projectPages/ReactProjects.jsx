@@ -18,6 +18,7 @@ import PageTitle from "../../../PageTitle";
 import Footer from "../../../Footer";
 import HeaderHamburger from "../HeaderHamburger";
 import JFHNEW from "../../../../assets/JFHNEW.png";
+import MABEL from "../../../../assets/mabel.png";
 
 const ReactProjects = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -84,11 +85,18 @@ const ReactProjects = () => {
           {/* Turn to component */}
 
           <ProjectsCards
+            title="LUC - Fashion House"
+            image={MABEL}
+            alt="JFH"
+            link="https://luc-xi.vercel.app/"
+            githublink="https://github.com/Nkemakolamuko/loveableanduniqueclothing"
+          />
+          <ProjectsCards
             title="Jamal Forex Hub 2.0"
             image={JFHNEW}
             alt="JFH"
             link="https://jfhub.vercel.app/"
-            githublink="https://github.com/Nkemakolamuko/"
+            githublink="https://github.com/Nkemakolamuko/jamal-forex-hub-latest"
           />
 
           <ProjectsCards
