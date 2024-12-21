@@ -90,8 +90,7 @@ const About = () => {
             as a Frontend Developer, and gained valuable hands-on experience at
             honing my skills in software development, UI/UX using Figma, Team
             Collaboration, and Soft Skills.
-            <br /> <br /> Additionally, I have completed over 75% of my
-            coursework with{" "}
+            <br /> <br /> Also, I have completed over 75% of my coursework with{" "}
             <span className="font-bold text-blue-500 hover:text-blue-600 underline underline-offset-1">
               <a
                 href="https://www.theodinproject.com/"
@@ -101,7 +100,18 @@ const About = () => {
                 The Odin Project
               </a>
             </span>
-            , an immersive online learning platform for web development.
+            , an immersive online learning platform for web development. I am
+            also enrolled with{" "}
+            <span className="font-bold text-blue-500 hover:text-blue-600 underline underline-offset-1">
+              <a
+                href="https://www.theodinproject.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                The Gym
+              </a>
+            </span>
+            , an intensive Software Development Boot-camp in Rwanda.
           </p>
           <br />
           Additionally, I am on my path to becoming a Full-Stack MERN Developer.
