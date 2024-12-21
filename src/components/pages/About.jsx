@@ -9,6 +9,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ThemeContext } from "../../App";
 import { FaAngleDown } from "react-icons/fa6";
+import useContentful from "../../contexts/useContentful";
 
 const About = () => {
   const { theme } = useContext(ThemeContext);
@@ -16,6 +17,8 @@ const About = () => {
   const [isInterestVisible, setIsInterestVisible] = useState(false);
   const [isHamburgerVisible, setIsHamburgerVisible] = useState(false);
   const interestsRef = useRef(null);
+  const [authors, setAuthors] = useState("");
+  const { getAuthors } = useContentful();
 
   const toggleHamburger = () => setIsHamburgerVisible(!isHamburgerVisible);
   const toggleInterests = () => {
@@ -27,11 +30,15 @@ const About = () => {
 
   useEffect(() => {
     setLoading(true);
-    const timeoutId = setTimeout(() => {
+    // const timeoutId = setTimeout(() => {
+    //   setLoading(false);
+    //   clearTimeout(timeoutId);
+    // }, 2000);
+    getAuthors().then((response) => {
+      setAuthors(response.items[0].fields.myImage[0].fields.file.url);
       setLoading(false);
-      clearTimeout(timeoutId);
-    }, 2000);
-  }, []);
+    });
+  }, [authors]);
 
   return (
     <div className="dark" data-theme={theme}>
@@ -44,16 +51,16 @@ const About = () => {
       <div className="max-w-3xl mx-auto pb-28 px-4 md:px-0 lg:px-0">
         <div className="float-start md:float-left lg:float-left mr-[20px] md:w-[350px] w-full md:mb-0 mb-4">
           {loading ? (
-            <p className="h-[185px] w-[100%] flex justify-center text-center items-center text-sm border-b md:border-none">
+            <p className="h-[300px] w-[100%] flex justify-center text-center items-center text-sm border-b md:border-none">
               Loading image...
             </p>
           ) : (
             <img
-              src={PFP}
-              // width={400}
-              // height={400}
+              src={authors}
+              width={200}
+              height={200}
               alt="My Picture"
-              className="transition-all duration-300 md:rounded-b-r shadow-md hover:shadow-black/10 w-full"
+              className="transition-all duration-300 md:rounded-b-r shadow-md hover:shadow-black/10 w-full h-1/2"
             />
           )}
         </div>
