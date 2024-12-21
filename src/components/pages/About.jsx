@@ -103,11 +103,7 @@ const About = () => {
             , an immersive online learning platform for web development. I am
             also enrolled with{" "}
             <span className="font-bold text-blue-500 hover:text-blue-600 underline underline-offset-1">
-              <a
-                href="https://www.theodinproject.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="/" target="_blank" rel="noopener noreferrer">
                 The Gym
               </a>
             </span>
